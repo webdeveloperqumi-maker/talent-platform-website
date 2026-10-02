@@ -40,22 +40,15 @@ button {
 .glass-nav {
     width: 100%;
     min-height: 64px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 10px 16px 10px 22px;
-
     background: rgba(150, 210, 255, 0.10);
-
     border: 1px solid rgba(170, 220, 255, 0.18);
-
     border-radius: 18px;
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.08),
         0 10px 40px rgba(0,0,0,0.15);
@@ -88,13 +81,9 @@ button {
 
 .nav-cta {
     padding: 12px 18px;
-
     background: rgba(150, 210, 255, 0.25);
-
     border: 1px solid rgba(180, 225, 255, 0.35);
-
     border-radius: 12px;
-
     color: #ffffff !important;
 }
 
@@ -105,16 +94,11 @@ button {
 
 .hero {
     min-height: 100vh;
-
     display: grid;
     grid-template-columns: 1fr 0.8fr;
-
     align-items: center;
-
     gap: 70px;
-
     padding: 150px 8% 100px;
-
     background:
         radial-gradient(
             circle at 75% 35%,
@@ -130,62 +114,41 @@ button {
 
 .eyebrow {
     margin-bottom: 20px;
-
     color: rgba(180, 220, 255, 0.72);
-
     font-size: 0.68rem;
     font-weight: 600;
-
     letter-spacing: 0.18em;
 }
 
 .hero h1 {
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(4rem, 7vw, 7.2rem);
-
     font-weight: 400;
-
     line-height: 0.91;
-
     letter-spacing: -0.03em;
-
     margin-bottom: 32px;
 }
 
 .hero-description {
     max-width: 540px;
-
     color: rgba(255,255,255,0.62);
-
     font-size: 1rem;
-
     line-height: 1.7;
-
     margin-bottom: 35px;
 }
 
 .glass-button {
     display: inline-flex;
     align-items: center;
-
     padding: 15px 22px;
-
     background: rgba(150, 210, 255, 0.25);
-
     border: 1px solid rgba(180, 225, 255, 0.35);
-
     border-radius: 13px;
-
     color: #ffffff;
-
     text-decoration: none;
-
     font-size: 0.82rem;
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     transition: 0.3s ease;
 }
 
@@ -201,23 +164,18 @@ button {
 
 .hero-people {
     position: relative;
-
     min-height: 650px;
 }
 
 .person-card {
     position: absolute;
-
     width: 65%;
     height: 370px;
-
     overflow: hidden;
-
     border-radius: 25px;
-
     background: #132237;
-
     border: 1px solid rgba(180, 220, 255, 0.12);
+    transition: transform 0.45s ease;
 }
 
 .person-card-one {
@@ -241,46 +199,101 @@ button {
 .person-image {
     width: 100%;
     height: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     background: #132237;
-
     color: rgba(255,255,255,0.22);
-
     font-size: 0.65rem;
-
     letter-spacing: 0.15em;
+}
+
+
+/* Editorial talent treatment instead of fake photos */
+
+.person-editorial {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150,210,255,0.12),
+            rgba(8,22,37,0.92)
+        );
+}
+
+.person-editorial::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -70px;
+    right: -50px;
+    border: 1px solid rgba(180,225,255,0.14);
+    border-radius: 50%;
+}
+
+.person-editorial::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    bottom: -170px;
+    left: -120px;
+    border: 1px solid rgba(180,225,255,0.09);
+    border-radius: 50%;
+}
+
+.person-index {
+    position: absolute;
+    top: 25px;
+    left: 28px;
+    color: rgba(205,235,255,0.45);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+}
+
+.person-category {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    color: rgba(205,235,255,0.52);
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+}
+
+.person-large-role {
+    position: relative;
+    z-index: 2;
+    color: rgba(255,255,255,0.88);
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(3rem, 4.5vw, 5rem);
+    font-weight: 400;
+    line-height: 0.82;
+    letter-spacing: -0.025em;
 }
 
 .person-glass {
     position: absolute;
-
     left: 15px;
     right: 15px;
     bottom: 15px;
-
     padding: 14px 16px;
-
     background: rgba(150,210,255,0.10);
-
     border: 1px solid rgba(180,225,255,0.20);
-
     border-radius: 14px;
-
     backdrop-filter: blur(18px);
+    z-index: 4;
 }
 
 .person-glass span {
     display: block;
-
     color: rgba(200,225,245,0.68);
-
     font-size: 0.65rem;
-
     margin-bottom: 5px;
 }
 
@@ -296,126 +309,88 @@ button {
 
 .companies {
     padding: 140px 7%;
-
     background: #091522;
 }
 
 .section-heading {
     max-width: 750px;
-
     margin-bottom: 65px;
 }
 
 .section-heading h2 {
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(3.2rem, 6vw, 5.5rem);
-
     font-weight: 400;
-
     line-height: 0.95;
-
     margin-bottom: 25px;
 }
 
 .section-heading p:last-child {
     color: rgba(255,255,255,0.58);
-
     font-size: 0.95rem;
-
     line-height: 1.7;
 }
 
 .company-grid {
     display: grid;
-
     grid-template-columns: repeat(5, 1fr);
-
     gap: 16px;
 }
 
 .company-card {
     min-height: 330px;
-
     padding: 20px;
-
     display: flex;
-
     flex-direction: column;
-
     background: rgba(255,255,255,0.025);
-
     border: 1px solid rgba(170,215,255,0.10);
-
     border-radius: 20px;
-
     transition: 0.3s ease;
 }
 
 .company-card:hover {
     transform: translateY(-5px);
-
     background: rgba(150,210,255,0.05);
-
     border-color: rgba(170,215,255,0.22);
 }
 
 .company-logo {
     height: 115px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     margin-bottom: 20px;
-
     border-radius: 14px;
-
     background: rgba(255,255,255,0.035);
-
     color: rgba(255,255,255,0.25);
-
     font-size: 0.65rem;
-
     letter-spacing: 0.14em;
 }
 
 .company-info h3 {
     font-size: 0.95rem;
-
     font-weight: 500;
-
     margin-bottom: 6px;
 }
 
 .company-info span {
     display: block;
-
     color: rgba(170,215,255,0.65);
-
     font-size: 0.68rem;
-
     margin-bottom: 13px;
 }
 
 .company-info p {
     color: rgba(255,255,255,0.48);
-
     font-size: 0.72rem;
-
     line-height: 1.6;
-
     margin-bottom: auto;
 }
 
 .company-link {
     margin-top: 20px;
-
     color: rgba(210,235,255,0.78);
-
     font-size: 0.7rem;
-
     text-decoration: none;
 }
 
@@ -426,41 +401,29 @@ button {
 
 .talent {
     padding: 160px 7%;
-
     background: #081321;
 }
 
 .talent-intro {
     display: grid;
-
     grid-template-columns: 1.2fr 0.8fr;
-
     gap: 100px;
-
     align-items: end;
-
     margin-bottom: 75px;
 }
 
 .talent-intro h2 {
     max-width: 850px;
-
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(4rem, 7vw, 6.5rem);
-
     font-weight: 400;
-
     line-height: 0.9;
 }
 
 .talent-intro > p {
     max-width: 420px;
-
     color: rgba(255,255,255,0.55);
-
     font-size: 0.88rem;
-
     line-height: 1.75;
 }
 
@@ -471,23 +434,17 @@ button {
 
 .talent-showcase {
     display: grid;
-
     grid-template-columns:
         minmax(0, 1.45fr)
         minmax(360px, 0.65fr);
-
     gap: 28px;
-
     align-items: stretch;
 }
 
 .talent-directory {
     min-height: 720px;
-
     padding: 36px;
-
     display: flex;
-
     flex-direction: column;
 
     background:
@@ -498,7 +455,6 @@ button {
         );
 
     border: 1px solid rgba(170,215,255,0.13);
-
     border-radius: 32px;
 
     box-shadow:
@@ -507,67 +463,51 @@ button {
 
 .directory-top {
     display: flex;
-
     align-items: flex-start;
-
     justify-content: space-between;
-
     gap: 30px;
-
     margin-bottom: 18px;
 }
 
 .directory-top h3 {
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(3rem, 5vw, 5rem);
-
     font-weight: 400;
-
     line-height: 0.9;
 }
 
 .directory-status {
     padding: 8px 11px;
-
     border: 1px solid rgba(180,225,255,0.15);
-
     border-radius: 100px;
-
     color: rgba(200,230,250,0.48);
-
     font-size: 0.58rem;
-
     letter-spacing: 0.12em;
-
     white-space: nowrap;
 }
 
 .directory-description {
     max-width: 570px;
-
     color: rgba(255,255,255,0.52);
-
     font-size: 0.82rem;
-
     line-height: 1.7;
-
     margin-bottom: 30px;
 }
 
 .professional-list {
     display: flex;
-
     flex-direction: column;
-
     gap: 10px;
-
     margin-top: auto;
 }
 
-.professional-profile {
-    min-height: 145px;
 
+/* =========================================
+   REAL PROFESSIONAL CARDS
+========================================= */
+
+.professional-profile {
+    min-height: 155px;
     padding: 22px;
 
     display: grid;
@@ -584,109 +524,129 @@ button {
 
     border-radius: 19px;
 
+    opacity: 0;
+
+    animation:
+        talentCardIn
+        0.55s
+        ease
+        forwards;
+
+    animation-delay: var(--profile-delay);
+
     transition:
         transform 0.3s ease,
         background 0.3s ease,
         border-color 0.3s ease;
 }
 
+@keyframes talentCardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
 .professional-profile:hover {
     transform: translateX(5px);
-
     background: rgba(150,210,255,0.075);
-
     border-color: rgba(180,225,255,0.22);
 }
 
 .profile-number {
     align-self: start;
-
     color: rgba(190,225,255,0.40);
-
     font-size: 0.65rem;
-
     letter-spacing: 0.08em;
 }
 
 .profile-main > span {
     display: block;
-
     color: rgba(190,225,255,0.48);
-
     font-size: 0.58rem;
-
     letter-spacing: 0.14em;
-
     margin-bottom: 7px;
 }
 
 .profile-main h4 {
     font-family: "Instrument Serif", serif;
-
     font-size: 1.9rem;
-
     font-weight: 400;
-
     line-height: 1;
-
     margin-bottom: 5px;
 }
 
 .profile-main p {
     color: rgba(255,255,255,0.55);
-
     font-size: 0.72rem;
+    margin-bottom: 10px;
+}
 
-    margin-bottom: 12px;
+.profile-detail-line {
+    max-width: 620px;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.67rem;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+.profile-previous {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 11px;
+}
+
+.profile-previous span {
+    color: rgba(190,225,255,0.42);
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+}
+
+.profile-previous strong {
+    color: rgba(225,242,255,0.68);
+    font-size: 0.58rem;
+    font-weight: 500;
 }
 
 .profile-tags {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 6px;
 }
 
 .profile-tags span {
     padding: 6px 9px;
-
     background: rgba(150,210,255,0.055);
-
     border: 1px solid rgba(170,215,255,0.12);
-
     border-radius: 100px;
-
     color: rgba(215,238,255,0.60);
-
     font-size: 0.58rem;
 }
 
 .profile-action {
     align-self: center;
-
     padding: 9px 12px;
-
     background: transparent;
-
     border: 1px solid rgba(180,225,255,0.16);
-
     border-radius: 10px;
-
     color: rgba(215,238,255,0.70);
-
     font-size: 0.65rem;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
 .profile-action:hover {
     background: rgba(150,210,255,0.10);
-
     border-color: rgba(180,225,255,0.28);
-
     color: #ffffff;
 }
 
@@ -697,41 +657,25 @@ button {
 
 .talent-categories {
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
-
     gap: 9px;
 }
 
 .talent-category {
     width: 100%;
-
     min-height: 82px;
-
     padding: 16px 20px;
-
     display: grid;
-
     grid-template-columns: 38px 1fr 20px;
-
     align-items: center;
-
     gap: 12px;
-
     text-align: left;
-
     color: #ffffff;
-
     background: rgba(150,210,255,0.035);
-
     border: 1px solid rgba(170,215,255,0.10);
-
     border-radius: 17px;
-
     cursor: pointer;
-
     transition:
         background 0.3s ease,
         border-color 0.3s ease,
@@ -740,9 +684,7 @@ button {
 
 .talent-category > span {
     color: rgba(180,220,255,0.45);
-
     font-size: 0.67rem;
-
     letter-spacing: 0.08em;
 }
 
@@ -752,49 +694,37 @@ button {
 
 .talent-category strong {
     display: block;
-
     color: rgba(255,255,255,0.90);
-
     font-size: 0.82rem;
-
     font-weight: 500;
-
     margin-bottom: 5px;
 }
 
 .talent-category small {
     display: block;
-
     color: rgba(255,255,255,0.38);
-
     font-size: 0.65rem;
 }
 
 .talent-category b {
     color: rgba(190,225,255,0.42);
-
     font-weight: 400;
-
     transition: 0.3s ease;
 }
 
 .talent-category:hover {
     background: rgba(150,210,255,0.08);
-
     border-color: rgba(170,215,255,0.22);
-
     transform: translateX(4px);
 }
 
 .talent-category:hover b {
     color: #d9efff;
-
     transform: translateX(3px);
 }
 
 .talent-category.active {
     background: rgba(150,210,255,0.115);
-
     border-color: rgba(180,220,255,0.28);
 
     box-shadow:
@@ -808,7 +738,6 @@ button {
 
 .results {
     padding: 160px 7% 140px;
-
     background:
         radial-gradient(
             circle at 80% 45%,
@@ -820,80 +749,52 @@ button {
 
 .results-heading {
     display: flex;
-
     justify-content: space-between;
-
     align-items: flex-end;
-
     gap: 80px;
-
     margin-bottom: 70px;
 }
 
 .results-heading h2 {
     max-width: 800px;
-
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(3.5rem, 7vw, 6.5rem);
-
     font-weight: 400;
-
     line-height: 0.9;
 }
 
 .results-heading > p {
     max-width: 360px;
-
     color: rgba(255,255,255,0.55);
-
     font-size: 0.85rem;
-
     line-height: 1.7;
 }
 
-
 .featured-case-study {
     position: relative;
-
     min-height: 720px;
-
     overflow: hidden;
-
     border-radius: 30px;
-
     background: #111e2e;
-
     border: 1px solid rgba(170,215,255,0.13);
 }
 
-
 .case-study-image {
     position: absolute;
-
     inset: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     background: #172a3d;
-
     color: rgba(255,255,255,0.20);
-
     transition: transform 0.5s ease;
-
     transform-origin: center;
 }
 
 .case-study-image-placeholder {
     width: 100%;
     height: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -907,29 +808,19 @@ button {
 
 .case-study-image-placeholder span {
     font-size: 0.68rem;
-
     letter-spacing: 0.16em;
-
     color: rgba(255,255,255,0.20);
 }
 
-
 .case-study-glass {
     position: absolute;
-
     left: 40px;
     bottom: 40px;
-
     width: min(520px, calc(100% - 80px));
-
     padding: 34px;
-
     background: rgba(8,22,37,0.76);
-
     border: 1px solid rgba(180,225,255,0.22);
-
     border-radius: 25px;
-
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
 
@@ -940,79 +831,56 @@ button {
 
 .case-study-top {
     display: flex;
-
     justify-content: space-between;
-
     margin-bottom: 28px;
 }
 
 .case-study-top span {
     color: rgba(190,225,255,0.70);
-
     font-size: 0.63rem;
-
     letter-spacing: 0.16em;
 }
 
 .case-study-top strong {
     color: rgba(190,225,255,0.40);
-
     font-size: 0.7rem;
-
     font-weight: 400;
 }
 
 .case-study-glass h3 {
     font-family: "Instrument Serif", serif;
-
     font-size: 3.6rem;
-
     font-weight: 400;
-
     line-height: 0.92;
-
     margin-bottom: 24px;
 }
 
 .case-study-glass > p {
     color: rgba(255,255,255,0.60);
-
     font-size: 0.82rem;
-
     line-height: 1.7;
-
     margin-bottom: 25px;
 }
 
 .case-study-tags {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
-
     margin-bottom: 28px;
 }
 
 .case-study-tags span {
     padding: 8px 12px;
-
     background: rgba(150,210,255,0.07);
-
     border: 1px solid rgba(170,215,255,0.16);
-
     border-radius: 100px;
-
     color: rgba(220,240,255,0.70);
-
     font-size: 0.65rem;
 }
 
 .case-study-glass a {
     color: #d9efff;
-
     text-decoration: none;
-
     font-size: 0.78rem;
 }
 
@@ -1023,80 +891,53 @@ button {
 
 .why-talent {
     padding: 170px 7%;
-
     background: #091522;
-
     position: relative;
 }
 
 .why-talent-heading {
     display: grid;
-
     grid-template-columns: 1.25fr 0.75fr;
-
     gap: 100px;
-
     align-items: end;
-
     margin-bottom: 80px;
 }
 
 .why-talent-heading h2 {
     max-width: 900px;
-
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(4rem, 7vw, 6.7rem);
-
     font-weight: 400;
-
     line-height: 0.9;
-
     letter-spacing: -0.025em;
 }
 
 .why-talent-heading > p {
     max-width: 400px;
-
     color: rgba(255,255,255,0.55);
-
     font-size: 0.86rem;
-
     line-height: 1.8;
 }
 
 .why-talent-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 18px;
 }
 
 .why-card {
     position: relative;
-
     min-height: 350px;
-
     padding: 30px;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
-
     overflow: hidden;
-
     background: rgba(150,210,255,0.035);
-
     border: 1px solid rgba(170,215,255,0.12);
-
     border-radius: 25px;
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     transition:
         transform 0.35s ease,
         background 0.35s ease,
@@ -1105,9 +946,7 @@ button {
 
 .why-card:hover {
     transform: translateY(-6px);
-
     background: rgba(150,210,255,0.065);
-
     border-color: rgba(180,225,255,0.24);
 }
 
@@ -1126,9 +965,7 @@ button {
 
 .why-card-number {
     color: rgba(190,225,255,0.45);
-
     font-size: 0.68rem;
-
     letter-spacing: 0.12em;
 }
 
@@ -1138,70 +975,47 @@ button {
 
 .why-card-content > span {
     display: block;
-
     color: rgba(190,225,255,0.70);
-
     font-size: 0.63rem;
-
     letter-spacing: 0.16em;
-
     margin-bottom: 13px;
 }
 
 .why-card-content h3 {
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(2.1rem, 3vw, 3.1rem);
-
     font-weight: 400;
-
     line-height: 0.98;
-
     margin-bottom: 17px;
 }
 
 .why-card-content p {
     max-width: 440px;
-
     color: rgba(255,255,255,0.52);
-
     font-size: 0.77rem;
-
     line-height: 1.75;
 }
 
 .why-card-arrow {
     position: absolute;
-
     top: 27px;
     right: 28px;
-
     width: 38px;
     height: 38px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border: 1px solid rgba(180,225,255,0.16);
-
     border-radius: 50%;
-
     color: rgba(210,235,255,0.62);
-
     font-size: 0.85rem;
-
     transition: 0.3s ease;
 }
 
 .why-card:hover .why-card-arrow {
     background: rgba(150,210,255,0.13);
-
     border-color: rgba(180,225,255,0.30);
-
     color: #ffffff;
-
     transform: translate(2px, -2px);
 }
 
@@ -1212,17 +1026,11 @@ button {
 
 .final-cta {
     position: relative;
-
     min-height: 680px;
-
     padding: 150px 7%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
 
     background:
@@ -1236,13 +1044,9 @@ button {
 
 .final-cta-inner {
     position: relative;
-
     z-index: 2;
-
     width: 100%;
-
     max-width: 1100px;
-
     text-align: center;
 }
 
@@ -1252,59 +1056,42 @@ button {
 
 .final-cta h2 {
     font-family: "Instrument Serif", serif;
-
     font-size: clamp(5rem, 10vw, 9.5rem);
-
     font-weight: 400;
-
     line-height: 0.82;
-
     letter-spacing: -0.035em;
-
     margin-bottom: 35px;
 }
 
 .final-cta-description {
     max-width: 480px;
-
     margin: 0 auto 35px;
-
     color: rgba(255,255,255,0.55);
-
     font-size: 0.9rem;
-
     line-height: 1.7;
 }
 
 .final-cta-actions {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 28px;
 }
 
 .final-primary {
     min-width: 125px;
-
     justify-content: center;
 }
 
 .final-secondary {
     color: rgba(220,240,255,0.78);
-
     text-decoration: none;
-
     font-size: 0.78rem;
-
     transition: 0.3s ease;
 }
 
 .final-secondary:hover {
     color: #ffffff;
-
     transform: translateX(3px);
 }
 
@@ -1313,31 +1100,24 @@ button {
 
 .final-cta-orbit {
     position: absolute;
-
     border: 1px solid rgba(150,210,255,0.07);
-
     border-radius: 50%;
-
     pointer-events: none;
 }
 
 .orbit-one {
     width: 500px;
     height: 500px;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
 .orbit-two {
     width: 800px;
     height: 800px;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
@@ -1348,19 +1128,14 @@ button {
 
 .site-footer {
     padding: 70px 7% 30px;
-
     background: #050d18;
-
     border-top: 1px solid rgba(170,215,255,0.08);
 }
 
 .footer-main {
     display: grid;
-
     grid-template-columns: 1.5fr 0.6fr 0.6fr;
-
     gap: 80px;
-
     padding-bottom: 70px;
 }
 
@@ -1370,69 +1145,49 @@ button {
 
 .footer-logo {
     font-size: 0.82rem;
-
     font-weight: 600;
-
     letter-spacing: 0.18em;
-
     margin-bottom: 18px;
 }
 
 .footer-brand p {
     color: rgba(255,255,255,0.42);
-
     font-size: 0.76rem;
-
     line-height: 1.7;
 }
 
 .footer-column {
     display: flex;
-
     flex-direction: column;
-
     gap: 13px;
 }
 
 .footer-column > span {
     color: rgba(190,225,255,0.55);
-
     font-size: 0.62rem;
-
     letter-spacing: 0.16em;
-
     margin-bottom: 5px;
 }
 
 .footer-column a {
     color: rgba(255,255,255,0.55);
-
     font-size: 0.73rem;
-
     text-decoration: none;
-
     transition: 0.3s ease;
 }
 
 .footer-column a:hover {
     color: #ffffff;
-
     transform: translateX(3px);
 }
 
 .footer-bottom {
     padding-top: 25px;
-
     border-top: 1px solid rgba(170,215,255,0.08);
-
     display: flex;
-
     justify-content: space-between;
-
     gap: 30px;
-
     color: rgba(255,255,255,0.28);
-
     font-size: 0.63rem;
 }
 
@@ -1457,21 +1212,17 @@ button {
 
     .hero {
         grid-template-columns: 1fr;
-
         padding-top: 150px;
     }
 
     .hero-people {
         max-width: 700px;
-
         width: 100%;
-
         margin: 0 auto;
     }
 
     .talent-intro {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
@@ -1481,13 +1232,11 @@ button {
 
     .talent-categories {
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
     }
 
     .why-talent-heading {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
@@ -1501,7 +1250,6 @@ button {
 
     .footer-main {
         grid-template-columns: 1fr 1fr;
-
         gap: 50px;
     }
 
@@ -1524,9 +1272,7 @@ button {
 
     .glass-nav {
         overflow-x: auto;
-
         justify-content: flex-start;
-
         scrollbar-width: none;
     }
 
@@ -1563,6 +1309,24 @@ button {
         top: 250px;
     }
 
+    .person-editorial {
+        padding: 20px;
+    }
+
+    .person-large-role {
+        font-size: 3.1rem;
+    }
+
+    .person-index {
+        top: 20px;
+        left: 20px;
+    }
+
+    .person-category {
+        top: 22px;
+        right: 20px;
+    }
+
 
     /* COMPANIES */
 
@@ -1595,15 +1359,12 @@ button {
 
     .talent-directory {
         min-height: auto;
-
         padding: 22px;
-
         border-radius: 25px;
     }
 
     .directory-top {
         gap: 15px;
-
         margin-bottom: 15px;
     }
 
@@ -1613,7 +1374,6 @@ button {
 
     .directory-status {
         font-size: 0.52rem;
-
         padding: 7px 9px;
     }
 
@@ -1626,25 +1386,32 @@ button {
     }
 
     .professional-profile {
-        min-height: 135px;
-
+        min-height: 155px;
         padding: 17px;
-
         grid-template-columns: 28px minmax(0, 1fr);
-
         gap: 12px;
     }
 
     .profile-action {
         grid-column: 2;
-
         justify-self: start;
-
         margin-top: -2px;
     }
 
     .profile-main h4 {
         font-size: 1.7rem;
+    }
+
+    .profile-detail-line {
+        font-size: 0.64rem;
+    }
+
+    .profile-previous {
+        gap: 5px;
+    }
+
+    .profile-previous strong {
+        font-size: 0.54rem;
     }
 
     .profile-tags span {
@@ -1653,9 +1420,7 @@ button {
 
     .talent-categories {
         display: flex;
-
         flex-direction: column;
-
         gap: 8px;
     }
 
@@ -1672,11 +1437,8 @@ button {
 
     .results-heading {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 30px;
-
         margin-bottom: 45px;
     }
 
@@ -1686,7 +1448,6 @@ button {
 
     .featured-case-study {
         min-height: 650px;
-
         border-radius: 24px;
     }
 
@@ -1694,11 +1455,8 @@ button {
         left: 15px;
         right: 15px;
         bottom: 15px;
-
         width: auto;
-
         padding: 24px;
-
         border-radius: 20px;
     }
 
@@ -1715,7 +1473,6 @@ button {
 
     .why-talent-heading {
         margin-bottom: 55px;
-
         gap: 28px;
     }
 
@@ -1729,23 +1486,18 @@ button {
 
     .why-talent-grid {
         display: flex;
-
         flex-direction: column;
-
         gap: 12px;
     }
 
     .why-card {
         min-height: 310px;
-
         padding: 25px;
-
         border-radius: 21px;
     }
 
     .why-card-content h3 {
         font-size: 2.35rem;
-
         max-width: 90%;
     }
 
@@ -1763,31 +1515,26 @@ button {
 
     .final-cta {
         min-height: 600px;
-
         padding: 110px 6%;
     }
 
     .final-cta h2 {
         font-size: 5rem;
-
         line-height: 0.86;
     }
 
     .final-cta-description {
         font-size: 0.82rem;
-
         max-width: 330px;
     }
 
     .final-cta-actions {
         flex-direction: column;
-
         gap: 20px;
     }
 
     .final-primary {
         width: 100%;
-
         max-width: 220px;
     }
 
@@ -1810,9 +1557,7 @@ button {
 
     .footer-main {
         grid-template-columns: 1fr 1fr;
-
         gap: 45px 25px;
-
         padding-bottom: 50px;
     }
 
@@ -1822,10 +1567,25 @@ button {
 
     .footer-bottom {
         flex-direction: column;
-
         gap: 10px;
-
         line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 
 }

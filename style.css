@@ -108,6 +108,7 @@ button {
 
     display: grid;
     grid-template-columns: 1fr 0.8fr;
+
     align-items: center;
 
     gap: 70px;
@@ -134,6 +135,7 @@ button {
 
     font-size: 0.68rem;
     font-weight: 600;
+
     letter-spacing: 0.18em;
 }
 
@@ -199,6 +201,7 @@ button {
 
 .hero-people {
     position: relative;
+
     min-height: 650px;
 }
 
@@ -240,6 +243,7 @@ button {
     height: 100%;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -248,6 +252,7 @@ button {
     color: rgba(255,255,255,0.22);
 
     font-size: 0.65rem;
+
     letter-spacing: 0.15em;
 }
 
@@ -286,16 +291,18 @@ button {
 
 
 /* =========================================
-   SECTION 2
+   COMPANIES
 ========================================= */
 
 .companies {
     padding: 140px 7%;
+
     background: #091522;
 }
 
 .section-heading {
     max-width: 750px;
+
     margin-bottom: 65px;
 }
 
@@ -333,6 +340,7 @@ button {
     padding: 20px;
 
     display: flex;
+
     flex-direction: column;
 
     background: rgba(255,255,255,0.025);
@@ -356,6 +364,7 @@ button {
     height: 115px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -368,12 +377,15 @@ button {
     color: rgba(255,255,255,0.25);
 
     font-size: 0.65rem;
+
     letter-spacing: 0.14em;
 }
 
 .company-info h3 {
     font-size: 0.95rem;
+
     font-weight: 500;
+
     margin-bottom: 6px;
 }
 
@@ -452,21 +464,17 @@ button {
     line-height: 1.75;
 }
 
-
-/* SHOWCASE */
-
 .talent-showcase {
     display: grid;
 
-    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.65fr);
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(360px, 0.65fr);
 
     gap: 28px;
 
     align-items: stretch;
 }
-
-
-/* FEATURED IMAGE */
 
 .featured-professional {
     position: relative;
@@ -508,9 +516,6 @@ button {
 
     letter-spacing: 0.15em;
 }
-
-
-/* GLASS */
 
 .professional-glass {
     position: absolute;
@@ -598,9 +603,6 @@ button {
 
     white-space: nowrap;
 }
-
-
-/* CATEGORY SIDE */
 
 .talent-categories {
     display: flex;
@@ -710,7 +712,7 @@ button {
 
 
 /* =========================================
-   SECTION 4
+   SECTION 4 — RESULTS
 ========================================= */
 
 .results {
@@ -759,6 +761,9 @@ button {
     line-height: 1.7;
 }
 
+
+/* MAIN CASE STUDY */
+
 .featured-case-study {
     position: relative;
 
@@ -773,10 +778,32 @@ button {
     border: 1px solid rgba(170,215,255,0.13);
 }
 
+
+/* PHOTO AREA */
+
 .case-study-image {
     position: absolute;
 
     inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #172a3d;
+
+    color: rgba(255,255,255,0.20);
+
+    transition: transform 0.5s ease;
+
+    transform-origin: center;
+}
+
+.case-study-image-placeholder {
+    width: 100%;
+    height: 100%;
 
     display: flex;
 
@@ -786,18 +813,21 @@ button {
     background:
         linear-gradient(
             135deg,
-            #1a3045,
-            #0d1d2e
+            #20384d,
+            #0e1d2d
         );
+}
 
-    color: rgba(255,255,255,0.20);
-
+.case-study-image-placeholder span {
     font-size: 0.68rem;
 
     letter-spacing: 0.16em;
 
-    transition: transform 0.5s ease;
+    color: rgba(255,255,255,0.20);
 }
+
+
+/* GLASS PANEL */
 
 .case-study-glass {
     position: absolute;
@@ -809,7 +839,7 @@ button {
 
     padding: 34px;
 
-    background: rgba(10,25,41,0.75);
+    background: rgba(8,22,37,0.76);
 
     border: 1px solid rgba(180,225,255,0.22);
 
@@ -817,6 +847,10 @@ button {
 
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.10),
+        0 25px 60px rgba(0,0,0,0.25);
 }
 
 .case-study-top {
@@ -1000,6 +1034,9 @@ button {
         top: 250px;
     }
 
+
+    /* COMPANIES */
+
     .companies {
         padding: 100px 6%;
     }
@@ -1009,7 +1046,7 @@ button {
     }
 
 
-    /* SECTION 3 */
+    /* TALENT */
 
     .talent {
         padding: 100px 5%;
@@ -1064,7 +1101,7 @@ button {
     }
 
 
-    /* SECTION 4 */
+    /* RESULTS */
 
     .results {
         padding: 100px 5%;

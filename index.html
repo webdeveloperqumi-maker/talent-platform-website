@@ -299,57 +299,161 @@
 
         <div class="talent-showcase">
 
-            <div class="featured-professional">
+            <!-- ACTIVE TALENT DIRECTORY -->
 
-                <div class="professional-image">
+            <div class="talent-directory">
 
-                    <span>
-                        APPROVED PROFESSIONAL IMAGE
+                <div class="directory-top">
+
+                    <div>
+
+                        <span class="professional-label">
+                            TALENT DIRECTORY
+                        </span>
+
+                        <h3 id="professional-role">
+                            Developers
+                        </h3>
+
+                    </div>
+
+                    <span class="directory-status">
+                        DEMO PROFILES
                     </span>
 
                 </div>
 
 
-                <div class="professional-glass">
-
-                    <div>
-
-                        <span class="professional-label">
-                            FEATURED PROFESSIONAL
-                        </span>
-
-                        <h3 id="professional-name">
-                            Professional
-                        </h3>
-
-                        <p id="professional-role">
-                            Developer
-                        </p>
-
-                        <p id="professional-description">
-                            Professional profile information will appear
-                            here once approved talent is added.
-                        </p>
-
-                    </div>
+                <p id="professional-description" class="directory-description">
+                    Explore professionals working across software
+                    engineering and technology.
+                </p>
 
 
-                    <a href="#" class="professional-link">
-                        View profile →
-                    </a>
+                <div id="professional-list" class="professional-list">
+
+                    <article class="professional-profile">
+
+                        <div class="profile-number">
+                            01
+                        </div>
+
+                        <div class="profile-main">
+
+                            <span>DEMO PROFILE</span>
+
+                            <h4>Professional One</h4>
+
+                            <p>
+                                Senior Developer
+                            </p>
+
+                            <div class="profile-tags">
+                                <span>Software Engineering</span>
+                                <span>Web Development</span>
+                            </div>
+
+                        </div>
+
+                        <button class="profile-action" type="button">
+                            View →
+                        </button>
+
+                    </article>
+
+
+                    <article class="professional-profile">
+
+                        <div class="profile-number">
+                            02
+                        </div>
+
+                        <div class="profile-main">
+
+                            <span>DEMO PROFILE</span>
+
+                            <h4>Professional Two</h4>
+
+                            <p>
+                                Full-Stack Developer
+                            </p>
+
+                            <div class="profile-tags">
+                                <span>JavaScript</span>
+                                <span>Product Technology</span>
+                            </div>
+
+                        </div>
+
+                        <button class="profile-action" type="button">
+                            View →
+                        </button>
+
+                    </article>
+
+
+                    <article class="professional-profile">
+
+                        <div class="profile-number">
+                            03
+                        </div>
+
+                        <div class="profile-main">
+
+                            <span>DEMO PROFILE</span>
+
+                            <h4>Professional Three</h4>
+
+                            <p>
+                                Software Engineer
+                            </p>
+
+                            <div class="profile-tags">
+                                <span>Backend</span>
+                                <span>Cloud Systems</span>
+                            </div>
+
+                        </div>
+
+                        <button class="profile-action" type="button">
+                            View →
+                        </button>
+
+                    </article>
 
                 </div>
 
             </div>
 
 
+            <!-- TALENT CATEGORIES -->
+
             <div class="talent-categories">
 
                 <button
                     class="talent-category active"
-                    data-role="Developer"
-                    data-description="Explore approved professionals working across software engineering and technology."
+                    data-role="Developers"
+                    data-description="Explore professionals working across software engineering and technology."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Senior Developer",
+                            "tags":["Software Engineering","Web Development"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Full-Stack Developer",
+                            "tags":["JavaScript","Product Technology"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Software Engineer",
+                            "tags":["Backend","Cloud Systems"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>01</span>
 
                     <div>
@@ -358,14 +462,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Designer"
-                    data-description="Explore approved professionals creating thoughtful digital and visual experiences."
+                    data-role="Designers"
+                    data-description="Explore professionals creating thoughtful digital and visual experiences."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Product Designer",
+                            "tags":["UX/UI","Product Design"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"UX Designer",
+                            "tags":["Research","User Experience"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Visual Designer",
+                            "tags":["Brand","Visual Systems"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>02</span>
 
                     <div>
@@ -374,14 +498,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Marketing Expert"
-                    data-description="Explore approved professionals specialising in growth, campaigns and brand strategy."
+                    data-role="Marketing Experts"
+                    data-description="Explore professionals specialising in growth, campaigns and brand strategy."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Marketing Strategist",
+                            "tags":["Growth","Campaign Strategy"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Brand Strategist",
+                            "tags":["Brand","Positioning"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Growth Specialist",
+                            "tags":["Acquisition","Analytics"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>03</span>
 
                     <div>
@@ -390,14 +534,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Management Consultant"
-                    data-description="Explore approved professionals helping organizations solve complex strategic challenges."
+                    data-role="Management Consultants"
+                    data-description="Explore professionals helping organizations solve complex strategic challenges."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Management Consultant",
+                            "tags":["Strategy","Operations"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Business Consultant",
+                            "tags":["Transformation","Planning"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Strategy Consultant",
+                            "tags":["Growth Strategy","Analysis"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>04</span>
 
                     <div>
@@ -406,14 +570,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Project Manager"
-                    data-description="Explore approved professionals responsible for planning, coordination and delivery."
+                    data-role="Project Managers"
+                    data-description="Explore professionals responsible for planning, coordination and delivery."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Senior Project Manager",
+                            "tags":["Delivery","Planning"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Technical Project Manager",
+                            "tags":["Technology","Coordination"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Program Manager",
+                            "tags":["Programs","Operations"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>05</span>
 
                     <div>
@@ -422,14 +606,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Product Manager"
-                    data-description="Explore approved professionals connecting product strategy, customer needs and business goals."
+                    data-role="Product Managers"
+                    data-description="Explore professionals connecting product strategy, customer needs and business goals."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Product Manager",
+                            "tags":["Product Strategy","Roadmaps"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Senior Product Manager",
+                            "tags":["Innovation","Product Growth"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Digital Product Manager",
+                            "tags":["Digital Products","Customer Experience"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>06</span>
 
                     <div>
@@ -438,14 +642,34 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
 
                 <button
                     class="talent-category"
-                    data-role="Sales Expert"
-                    data-description="Explore approved professionals specialising in commercial strategy, sales and partnerships."
+                    data-role="Sales Experts"
+                    data-description="Explore professionals specialising in commercial strategy, sales and partnerships."
+                    data-profiles='[
+                        {
+                            "name":"Professional One",
+                            "role":"Sales Strategist",
+                            "tags":["Commercial Strategy","Sales"]
+                        },
+                        {
+                            "name":"Professional Two",
+                            "role":"Business Development Lead",
+                            "tags":["Partnerships","Growth"]
+                        },
+                        {
+                            "name":"Professional Three",
+                            "role":"Enterprise Sales Expert",
+                            "tags":["Enterprise","Client Growth"]
+                        }
+                    ]'
+                    type="button"
                 >
+
                     <span>07</span>
 
                     <div>
@@ -454,6 +678,7 @@
                     </div>
 
                     <b>→</b>
+
                 </button>
 
             </div>
@@ -813,7 +1038,7 @@
 <script>
 
 /* =========================================
-   TALENT CATEGORY INTERACTION
+   TALENT DIRECTORY INTERACTION
 ========================================= */
 
 const categories =
@@ -824,6 +1049,66 @@ const professionalRole =
 
 const professionalDescription =
     document.getElementById("professional-description");
+
+const professionalList =
+    document.getElementById("professional-list");
+
+
+function renderProfessionals(profiles) {
+
+    professionalList.innerHTML = "";
+
+    profiles.forEach((profile, index) => {
+
+        const article =
+            document.createElement("article");
+
+        article.className =
+            "professional-profile";
+
+        const tags =
+            profile.tags
+                .map(tag => `<span>${tag}</span>`)
+                .join("");
+
+        article.innerHTML = `
+
+            <div class="profile-number">
+                ${String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div class="profile-main">
+
+                <span>DEMO PROFILE</span>
+
+                <h4>
+                    ${profile.name}
+                </h4>
+
+                <p>
+                    ${profile.role}
+                </p>
+
+                <div class="profile-tags">
+                    ${tags}
+                </div>
+
+            </div>
+
+            <button
+                class="profile-action"
+                type="button"
+            >
+                View →
+            </button>
+
+        `;
+
+        professionalList.appendChild(article);
+
+    });
+
+}
 
 
 categories.forEach(category => {
@@ -841,6 +1126,22 @@ categories.forEach(category => {
 
         professionalDescription.textContent =
             category.dataset.description;
+
+        try {
+
+            const profiles =
+                JSON.parse(category.dataset.profiles);
+
+            renderProfessionals(profiles);
+
+        } catch (error) {
+
+            console.error(
+                "Talent profile data could not be loaded.",
+                error
+            );
+
+        }
 
     });
 

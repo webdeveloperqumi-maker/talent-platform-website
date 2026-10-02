@@ -762,8 +762,6 @@ button {
 }
 
 
-/* MAIN CASE STUDY */
-
 .featured-case-study {
     position: relative;
 
@@ -778,8 +776,6 @@ button {
     border: 1px solid rgba(170,215,255,0.13);
 }
 
-
-/* PHOTO AREA */
 
 .case-study-image {
     position: absolute;
@@ -826,8 +822,6 @@ button {
     color: rgba(255,255,255,0.20);
 }
 
-
-/* GLASS PANEL */
 
 .case-study-glass {
     position: absolute;
@@ -933,6 +927,426 @@ button {
 
 
 /* =========================================
+   SECTION 5 — WHY TALENT PLATFORM
+========================================= */
+
+.why-talent {
+    padding: 170px 7%;
+
+    background: #091522;
+
+    position: relative;
+}
+
+.why-talent-heading {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 100px;
+
+    align-items: end;
+
+    margin-bottom: 80px;
+}
+
+.why-talent-heading h2 {
+    max-width: 900px;
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(4rem, 7vw, 6.7rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.025em;
+}
+
+.why-talent-heading > p {
+    max-width: 400px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+}
+
+.why-talent-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.why-card {
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background: rgba(150,210,255,0.035);
+
+    border: 1px solid rgba(170,215,255,0.12);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(150,210,255,0.065);
+
+    border-color: rgba(180,225,255,0.24);
+}
+
+.why-card-featured {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150,210,255,0.095),
+            rgba(150,210,255,0.035)
+        );
+}
+
+.why-card-wide {
+    background: rgba(255,255,255,0.025);
+}
+
+.why-card-number {
+    color: rgba(190,225,255,0.45);
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+}
+
+.why-card-content {
+    max-width: 520px;
+}
+
+.why-card-content > span {
+    display: block;
+
+    color: rgba(190,225,255,0.70);
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.16em;
+
+    margin-bottom: 13px;
+}
+
+.why-card-content h3 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(2.1rem, 3vw, 3.1rem);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    margin-bottom: 17px;
+}
+
+.why-card-content p {
+    max-width: 440px;
+
+    color: rgba(255,255,255,0.52);
+
+    font-size: 0.77rem;
+
+    line-height: 1.75;
+}
+
+.why-card-arrow {
+    position: absolute;
+
+    top: 27px;
+    right: 28px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(180,225,255,0.16);
+
+    border-radius: 50%;
+
+    color: rgba(210,235,255,0.62);
+
+    font-size: 0.85rem;
+
+    transition: 0.3s ease;
+}
+
+.why-card:hover .why-card-arrow {
+    background: rgba(150,210,255,0.13);
+
+    border-color: rgba(180,225,255,0.30);
+
+    color: #ffffff;
+
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   SECTION 6 — FINAL CTA
+========================================= */
+
+.final-cta {
+    position: relative;
+
+    min-height: 680px;
+
+    padding: 150px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(80,150,205,0.13),
+            transparent 40%
+        ),
+        #07111f;
+}
+
+.final-cta-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    text-align: center;
+}
+
+.final-cta .eyebrow {
+    margin-bottom: 24px;
+}
+
+.final-cta h2 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(5rem, 10vw, 9.5rem);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 35px;
+}
+
+.final-cta-description {
+    max-width: 480px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+.final-cta-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+}
+
+.final-primary {
+    min-width: 125px;
+
+    justify-content: center;
+}
+
+.final-secondary {
+    color: rgba(220,240,255,0.78);
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+
+    transition: 0.3s ease;
+}
+
+.final-secondary:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* SUBTLE DECORATIVE RINGS */
+
+.final-cta-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(150,210,255,0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 500px;
+    height: 500px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.orbit-two {
+    width: 800px;
+    height: 800px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 70px 7% 30px;
+
+    background: #050d18;
+
+    border-top: 1px solid rgba(170,215,255,0.08);
+}
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.6fr 0.6fr;
+
+    gap: 80px;
+
+    padding-bottom: 70px;
+}
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-logo {
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,0.42);
+
+    font-size: 0.76rem;
+
+    line-height: 1.7;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.footer-column > span {
+    color: rgba(190,225,255,0.55);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.16em;
+
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.73rem;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.footer-bottom {
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(170,215,255,0.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: rgba(255,255,255,0.28);
+
+    font-size: 0.63rem;
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -978,6 +1392,30 @@ button {
         display: grid;
 
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-talent-heading {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .why-talent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card-wide {
+        min-height: 350px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 50px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
     }
 
 }
@@ -1141,6 +1579,128 @@ button {
 
     .case-study-glass h3 {
         font-size: 2.8rem;
+    }
+
+
+    /* SECTION 5 */
+
+    .why-talent {
+        padding: 105px 5%;
+    }
+
+    .why-talent-heading {
+        margin-bottom: 55px;
+
+        gap: 28px;
+    }
+
+    .why-talent-heading h2 {
+        font-size: 3.7rem;
+    }
+
+    .why-talent-heading > p {
+        font-size: 0.82rem;
+    }
+
+    .why-talent-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .why-card {
+        min-height: 310px;
+
+        padding: 25px;
+
+        border-radius: 21px;
+    }
+
+    .why-card-content h3 {
+        font-size: 2.35rem;
+
+        max-width: 90%;
+    }
+
+    .why-card-content p {
+        font-size: 0.75rem;
+    }
+
+    .why-card-arrow {
+        top: 22px;
+        right: 22px;
+    }
+
+
+    /* SECTION 6 */
+
+    .final-cta {
+        min-height: 600px;
+
+        padding: 110px 6%;
+    }
+
+    .final-cta h2 {
+        font-size: 5rem;
+
+        line-height: 0.86;
+    }
+
+    .final-cta-description {
+        font-size: 0.82rem;
+
+        max-width: 330px;
+    }
+
+    .final-cta-actions {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .final-primary {
+        width: 100%;
+
+        max-width: 220px;
+    }
+
+    .orbit-one {
+        width: 330px;
+        height: 330px;
+    }
+
+    .orbit-two {
+        width: 560px;
+        height: 560px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px 25px;
+
+        padding-bottom: 50px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+
+        line-height: 1.5;
     }
 
 }

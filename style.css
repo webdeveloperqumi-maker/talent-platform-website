@@ -1,403 +1,195 @@
-/* ========================================
-   FONT COMPARISON
-======================================== */
-
-/* Import all four font combinations */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Serif+Display&family=Instrument+Serif&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-
-
-/* ========================================
-   RESET
-======================================== */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     background: #07111f;
     color: #ffffff;
+    min-height: 100vh;
+}
+
+.font-comparison {
+    width: min(1400px, 92%);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.comparison-heading {
+    margin-bottom: 45px;
+}
+
+.comparison-heading p {
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.55;
+    margin-bottom: 14px;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+.comparison-heading h1 {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1;
+    max-width: 700px;
+    margin-bottom: 15px;
 }
 
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-.navbar {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: calc(100% - 40px);
-    max-width: 1200px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 13px 17px;
-
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.18),
-        inset 0 1px 1px rgba(255, 255, 255, 0.12);
-
-    z-index: 1000;
+.comparison-heading span {
+    font-family: "Inter", sans-serif;
+    opacity: 0.55;
 }
 
 
-/* Logo */
+/* FOUR CARDS */
 
-.logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+.font-card {
+    position: relative;
+    min-height: 430px;
+    padding: 45px;
+    margin-bottom: 30px;
+
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+
+    overflow: hidden;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-    display: block;
-}
 
+/* OPTION LABEL */
 
-/* Navigation links */
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-links a {
+.option-number {
     font-family: "Inter", sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.72);
-
-    transition: color 0.3s ease;
+    letter-spacing: 2px;
+    opacity: 0.45;
+    margin-bottom: 10px;
 }
 
-.nav-links a:hover {
-    color: #ffffff;
+.option-name {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-bottom: 55px;
 }
 
 
-/* Glass button */
+/* HEADLINE */
 
-.nav-button,
-.hero-button {
-    background: rgba(150, 210, 255, 0.18);
+.font-card h2 {
+    max-width: 900px;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
 
-    border: 1px solid rgba(180, 225, 255, 0.38);
+
+/* BODY */
+
+.font-card p {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* GLASS BUTTON */
+
+.font-card button {
+    padding: 14px 24px;
+
+    border: 1px solid rgba(190, 225, 255, 0.55);
+    border-radius: 999px;
+
+    background: rgba(150, 210, 255, 0.28);
+    color: white;
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.18),
-        0 8px 25px rgba(0, 0, 0, 0.12);
-
-    color: #dff2ff;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.nav-button {
-    padding: 11px 17px;
-    border-radius: 12px;
-
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.nav-button:hover,
-.hero-button:hover {
-    background: rgba(150, 210, 255, 0.28);
-    border-color: rgba(190, 230, 255, 0.55);
-    transform: translateY(-2px);
-}
-
-
-/* ========================================
-   HERO
-======================================== */
-
-.hero {
-    min-height: 100vh;
-
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-
-    align-items: center;
-
-    gap: 70px;
-
-    padding: 150px 7% 80px;
-}
-
-
-/* Left content */
-
-.hero-content {
-    max-width: 650px;
-}
-
-.hero-label {
-    margin-bottom: 22px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3px;
-
-    color: #9ed7ff;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 6vw, 82px);
-    line-height: 0.98;
-    letter-spacing: -2px;
-
-    max-width: 680px;
-}
-
-.hero-description {
-    margin-top: 28px;
-
-    max-width: 510px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    line-height: 1.65;
-
-    color: rgba(255, 255, 255, 0.65);
-}
-
-.hero-button {
-    display: inline-block;
-
-    margin-top: 34px;
-
-    padding: 15px 23px;
-
-    border-radius: 14px;
+        inset 0 1px 1px rgba(255, 255, 255, 0.35),
+        0 8px 30px rgba(0, 0, 0, 0.15);
 
     font-family: "Inter", sans-serif;
     font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* FONT 1 */
+
+.option-1 h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.option-1 p {
+    font-family: "Inter", sans-serif;
+}
+
+
+/* FONT 2 */
+
+.option-2 h2 {
+    font-family: "DM Serif Display", serif;
+}
+
+.option-2 p {
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* FONT 3 */
+
+.option-3 h2 {
+    font-family: "Cormorant Garamond", serif;
     font-weight: 600;
 }
 
-
-/* ========================================
-   TALENT CARDS
-======================================== */
-
-.hero-talent {
-    position: relative;
-
-    min-height: 650px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.option-3 p {
+    font-family: "Manrope", sans-serif;
 }
 
-.talent-card {
-    position: absolute;
 
-    width: min(330px, 70%);
+/* FONT 4 */
 
-    overflow: hidden;
-
-    border-radius: 24px;
-
-    background: rgba(255, 255, 255, 0.06);
-
-    border: 1px solid rgba(255, 255, 255, 0.14);
-
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-
-    transition: transform 0.5s ease;
+.option-4 h2 {
+    font-family: "Instrument Serif", serif;
 }
 
-.talent-card:hover {
-    transform: translateY(-10px);
-}
-
-.talent-card-one {
-    top: 4%;
-    right: 17%;
-    z-index: 3;
-}
-
-.talent-card-two {
-    top: 28%;
-    right: 4%;
-    z-index: 2;
-}
-
-.talent-card-three {
-    top: 52%;
-    right: 17%;
-    z-index: 1;
-}
-
-.talent-image {
-    height: 300px;
-    overflow: hidden;
-}
-
-.talent-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-.talent-info {
-    padding: 18px 20px;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-}
-
-.talent-info h2 {
+.option-4 p {
     font-family: "Inter", sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-
-    margin-bottom: 5px;
-}
-
-.talent-info p {
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-
-    color: rgba(255, 255, 255, 0.58);
 }
 
 
-/* ========================================
-   FONT TESTING
-======================================== */
+/* MOBILE */
 
-/*
-    OPTION 1
-    Playfair Display + Inter
-*/
+@media (max-width: 600px) {
 
-.hero-content::before {
-    content: "OPTION 1 — PLAYFAIR DISPLAY + INTER";
-
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-
-    color: rgba(255, 255, 255, 0.4);
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 850px) {
-
-    .navbar {
-        width: calc(100% - 24px);
-        top: 12px;
+    .font-comparison {
+        width: 90%;
+        padding: 35px 0;
     }
 
-    .nav-links {
-        gap: 18px;
-
-        margin: 0 12px;
-
-        overflow-x: auto;
-        white-space: nowrap;
-
-        scrollbar-width: none;
+    .font-card {
+        padding: 28px;
+        min-height: 400px;
     }
 
-    .nav-links::-webkit-scrollbar {
-        display: none;
+    .option-name {
+        margin-bottom: 40px;
     }
 
-    .nav-links a {
-        font-size: 12px;
+    .font-card h2 {
+        font-size: 48px;
     }
 
-    .nav-button {
-        display: none;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        padding: 130px 24px 60px;
-
-        gap: 30px;
-    }
-
-    .hero h1 {
-        font-size: clamp(45px, 13vw, 68px);
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-talent {
-        min-height: 600px;
-    }
-
-    .talent-card {
-        width: 72%;
-    }
-
-    .talent-card-one {
-        right: 8%;
-    }
-
-    .talent-card-two {
-        right: 0;
-    }
-
-    .talent-card-three {
-        right: 8%;
+    .font-card p {
+        font-size: 15px;
     }
 }

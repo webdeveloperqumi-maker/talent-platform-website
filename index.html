@@ -1,322 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Talent Platform</title>
+    <title>Talent Platform</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+<header class="site-header">
 
-  <nav class="navbar">
+    <nav class="glass-nav">
 
-    <div class="logo">LOGO</div>
-
-    <div class="nav-links">
-      <a href="#">Talent</a>
-      <a href="#">Consulting & Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Blog</a>
-      <a href="#">About Us</a>
-    </div>
-
-    <a href="#" class="nav-button">Hire Talent</a>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-text">
-
-      <p class="eyebrow">GLOBAL PROFESSIONAL NETWORK</p>
-
-      <h1>Build your team with professionals who deliver.</h1>
-
-      <p class="description">
-        Get the expertise, experience and perspective your next project demands.
-      </p>
-
-      <a href="#" class="glass-button">
-        Explore the Network
-      </a>
-
-    </div>
-
-
-    <div class="people">
-
-      <div class="person person-one">
-        <span>Professional Portrait</span>
-      </div>
-
-      <div class="person person-two">
-        <span>Professional Portrait</span>
-      </div>
-
-      <div class="person person-three">
-        <span>Professional Portrait</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- COMPANIES -->
-
-  <section class="companies">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">OUR NETWORK</p>
-
-      <h2>Built alongside ambitious companies.</h2>
-
-      <p>
-        Trusted partnerships with organizations building what comes next.
-      </p>
-
-    </div>
-
-
-    <div class="company-grid">
-
-
-      <div class="company-card">
-
-        <div class="company-logo">
-          LOGO
+        <div class="nav-logo">
+            TALENT
         </div>
 
-        <div class="company-info">
-          <h3>Company One</h3>
-          <span>Technology</span>
+        <div class="nav-links">
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
+            <a href="#talent">Talent</a>
+            <a href="#services">Consulting & Services</a>
+            <a href="#companies">Clients</a>
+            <a href="#results">Blog</a>
+            <a href="#about">About Us</a>
+
+            <a href="#contact" class="nav-cta">
+                Hire Talent
+            </a>
+
         </div>
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
+    </nav>
 
-      </div>
+</header>
 
 
-      <div class="company-card">
+<main>
 
-        <div class="company-logo">
-          LOGO
+    <!-- =========================================
+         SECTION 1 — HERO
+    ========================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                GLOBAL TALENT NETWORK
+            </p>
+
+            <h1>
+                Build your team with professionals who deliver.
+            </h1>
+
+            <p class="hero-description">
+                Get the expertise, experience and perspective your next
+                project demands.
+            </p>
+
+            <a href="#talent" class="glass-button">
+                Explore the Network
+            </a>
+
         </div>
 
-        <div class="company-info">
-          <h3>Company Two</h3>
-          <span>Automotive</span>
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
+        <div class="hero-people">
+
+            <div class="person-card person-card-one">
+
+                <div class="person-placeholder">
+                    PROFESSIONAL PORTRAIT
+                </div>
+
+                <div class="person-glass">
+                    <span>Senior Developer</span>
+                    <strong>Professional One</strong>
+                </div>
+
+            </div>
+
+
+            <div class="person-card person-card-two">
+
+                <div class="person-placeholder">
+                    PROFESSIONAL PORTRAIT
+                </div>
+
+                <div class="person-glass">
+                    <span>Product Designer</span>
+                    <strong>Professional Two</strong>
+                </div>
+
+            </div>
+
+
+            <div class="person-card person-card-three">
+
+                <div class="person-placeholder">
+                    PROFESSIONAL PORTRAIT
+                </div>
+
+                <div class="person-glass">
+                    <span>Marketing Expert</span>
+                    <strong>Professional Three</strong>
+                </div>
+
+            </div>
+
         </div>
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
+    </section>
 
 
-      <div class="company-card">
+    <!-- =========================================
+         SECTION 2 — COMPANIES
+    ========================================== -->
 
-        <div class="company-logo">
-          LOGO
+    <section class="companies" id="companies">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                TRUSTED PARTNERSHIPS
+            </p>
+
+            <h2>
+                Built alongside ambitious companies.
+            </h2>
+
+            <p>
+                Trusted partnerships with organizations building what
+                comes next.
+            </p>
+
         </div>
 
-        <div class="company-info">
-          <h3>Company Three</h3>
-          <span>Finance</span>
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
+        <div class="company-grid">
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company One</h3>
+                    <span>Technology</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Two</h3>
+                    <span>Automotive</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Three</h3>
+                    <span>Finance</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Four</h3>
+                    <span>Healthcare</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Five</h3>
+                    <span>Design</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Six</h3>
+                    <span>Technology</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Seven</h3>
+                    <span>Finance</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Eight</h3>
+                    <span>Technology</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Nine</h3>
+                    <span>Automotive</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    LOGO
+                </div>
+
+                <div class="company-info">
+                    <h3>Company Ten</h3>
+                    <span>Healthcare</span>
+                    <p>
+                        Placeholder for an approved company and a short
+                        description of the collaboration.
+                    </p>
+                    <a href="#" class="company-link">
+                        View company →
+                    </a>
+                </div>
+
+            </article>
+
         </div>
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
+    </section>
 
 
-      <div class="company-card">
+    <!-- =========================================
+         SECTION 3 — TALENT
+    ========================================== -->
 
-        <div class="company-logo">
-          LOGO
+    <section class="talent" id="talent">
+
+        <div class="section-heading talent-heading">
+
+            <p class="eyebrow">
+                THE TALENT
+            </p>
+
+            <h2>
+                Leverage world-class talent.
+            </h2>
+
+            <p>
+                Access experienced professionals with the expertise
+                to move ambitious projects forward.
+            </p>
+
         </div>
 
-        <div class="company-info">
-          <h3>Company Four</h3>
-          <span>Healthcare</span>
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
+        <div class="talent-layout">
+
+            <!-- FEATURED PROFESSIONAL -->
+
+            <div class="featured-professional">
+
+                <div class="professional-photo">
+
+                    <div class="photo-placeholder">
+                        PROFESSIONAL PORTRAIT
+                    </div>
+
+                </div>
+
+
+                <div class="professional-glass">
+
+                    <div>
+
+                        <span class="professional-label">
+                            FEATURED PROFESSIONAL
+                        </span>
+
+                        <h3 id="professional-name">
+                            Alex Morgan
+                        </h3>
+
+                        <p id="professional-role">
+                            Senior Developer
+                        </p>
+
+                        <p id="professional-description">
+                            Builds scalable digital products with a focus
+                            on performance, clean architecture and user
+                            experience.
+                        </p>
+
+                    </div>
+
+
+                    <a href="#" class="professional-link">
+                        View profile →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- TALENT CATEGORIES -->
+
+            <div class="talent-categories">
+
+                <button
+                    class="talent-category active"
+                    data-name="Alex Morgan"
+                    data-role="Senior Developer"
+                    data-description="Builds scalable digital products with a focus on performance, clean architecture and user experience."
+                >
+
+                    <span>01</span>
+
+                    <strong>
+                        Developers
+                    </strong>
+
+                    <small>
+                        Engineering & technology
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Sofia Bennett"
+                    data-role="Senior Designer"
+                    data-description="Creates thoughtful digital experiences combining strong visual direction with intuitive user experience."
+                >
+
+                    <span>02</span>
+
+                    <strong>
+                        Designers
+                    </strong>
+
+                    <small>
+                        Product & visual design
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Jordan Ellis"
+                    data-role="Marketing Expert"
+                    data-description="Develops strategic marketing campaigns designed to strengthen brands and connect them with the right audiences."
+                >
+
+                    <span>03</span>
+
+                    <strong>
+                        Marketing Experts
+                    </strong>
+
+                    <small>
+                        Growth & strategy
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Daniel Brooks"
+                    data-role="Management Consultant"
+                    data-description="Helps organizations solve complex challenges through structured thinking, strategy and practical execution."
+                >
+
+                    <span>04</span>
+
+                    <strong>
+                        Management Consultants
+                    </strong>
+
+                    <small>
+                        Strategy & operations
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Maya Carter"
+                    data-role="Project Manager"
+                    data-description="Keeps complex projects moving through clear planning, communication and disciplined execution."
+                >
+
+                    <span>05</span>
+
+                    <strong>
+                        Project Managers
+                    </strong>
+
+                    <small>
+                        Planning & delivery
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Noah Williams"
+                    data-role="Product Manager"
+                    data-description="Connects customer needs, business goals and product strategy to create meaningful digital products."
+                >
+
+                    <span>06</span>
+
+                    <strong>
+                        Product Managers
+                    </strong>
+
+                    <small>
+                        Product & innovation
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="talent-category"
+                    data-name="Olivia Reed"
+                    data-role="Sales Expert"
+                    data-description="Builds strong commercial strategies and relationships that help ambitious companies grow."
+                >
+
+                    <span>07</span>
+
+                    <strong>
+                        Sales Experts
+                    </strong>
+
+                    <small>
+                        Sales & partnerships
+                    </small>
+
+                </button>
+
+            </div>
+
         </div>
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
+    </section>
 
-      </div>
+</main>
 
 
-      <div class="company-card">
+<script>
 
-        <div class="company-logo">
-          LOGO
-        </div>
+    const categories =
+        document.querySelectorAll(".talent-category");
 
-        <div class="company-info">
-          <h3>Company Five</h3>
-          <span>Design</span>
+    const professionalName =
+        document.getElementById("professional-name");
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
+    const professionalRole =
+        document.getElementById("professional-role");
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
+    const professionalDescription =
+        document.getElementById("professional-description");
 
 
-      <div class="company-card">
+    categories.forEach(category => {
 
-        <div class="company-logo">
-          LOGO
-        </div>
+        category.addEventListener("click", () => {
 
-        <div class="company-info">
-          <h3>Company Six</h3>
-          <span>Technology</span>
+            categories.forEach(item => {
+                item.classList.remove("active");
+            });
 
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
+            category.classList.add("active");
 
-        <a href="#" class="company-link">
-          View company →
-        </a>
+            professionalName.textContent =
+                category.dataset.name;
 
-      </div>
+            professionalRole.textContent =
+                category.dataset.role;
 
+            professionalDescription.textContent =
+                category.dataset.description;
 
-      <div class="company-card">
+        });
 
-        <div class="company-logo">
-          LOGO
-        </div>
+    });
 
-        <div class="company-info">
-          <h3>Company Seven</h3>
-          <span>Finance</span>
-
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
-
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
-
-
-      <div class="company-card">
-
-        <div class="company-logo">
-          LOGO
-        </div>
-
-        <div class="company-info">
-          <h3>Company Eight</h3>
-          <span>Technology</span>
-
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
-
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
-
-
-      <div class="company-card">
-
-        <div class="company-logo">
-          LOGO
-        </div>
-
-        <div class="company-info">
-          <h3>Company Nine</h3>
-          <span>Automotive</span>
-
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
-
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
-
-
-      <div class="company-card">
-
-        <div class="company-logo">
-          LOGO
-        </div>
-
-        <div class="company-info">
-          <h3>Company Ten</h3>
-          <span>Healthcare</span>
-
-          <p>
-            A placeholder for a short description of the company's work.
-          </p>
-        </div>
-
-        <a href="#" class="company-link">
-          View company →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+</script>
 
 </body>
 </html>

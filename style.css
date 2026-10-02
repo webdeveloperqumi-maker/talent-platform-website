@@ -17,7 +17,9 @@ a {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
   position: absolute;
@@ -91,7 +93,9 @@ a {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 100vh;
@@ -138,7 +142,9 @@ h1 {
 }
 
 
-/* LIQUID GLASS BUTTON */
+/* =========================
+   LIQUID GLASS
+========================= */
 
 .glass-button {
   display: inline-block;
@@ -165,7 +171,9 @@ h1 {
 }
 
 
-/* PEOPLE */
+/* =========================
+   PEOPLE
+========================= */
 
 .people {
   position: relative;
@@ -214,7 +222,182 @@ h1 {
 }
 
 
-/* MOBILE */
+/* =========================
+   COMPANIES
+========================= */
+
+.companies {
+  padding: 120px 6% 140px;
+
+  background: #0a1626;
+}
+
+.section-heading {
+  max-width: 850px;
+
+  margin-bottom: 70px;
+}
+
+.section-heading h2 {
+  font-family: "Instrument Serif", serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  margin-bottom: 25px;
+}
+
+.section-heading > p:last-child {
+  max-width: 550px;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  opacity: 0.6;
+}
+
+
+/* COMPANY GRID */
+
+.company-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* COMPANY CARD */
+
+.company-card {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.035);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-7px);
+
+  background: rgba(150,210,255,0.06);
+
+  border-color: rgba(190,225,255,0.3);
+}
+
+
+/* LOGO */
+
+.company-logo {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 55px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.65;
+}
+
+
+/* COMPANY INFORMATION */
+
+.company-info h3 {
+  font-size: 21px;
+
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.company-info span {
+  display: block;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  opacity: 0.4;
+
+  margin-bottom: 18px;
+}
+
+.company-info p {
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  opacity: 0.55;
+}
+
+
+/* LINK */
+
+.company-link {
+  margin-top: auto;
+
+  padding-top: 25px;
+
+  font-size: 12px;
+
+  opacity: 0.65;
+
+  transition: opacity 0.2s ease;
+}
+
+.company-link:hover {
+  opacity: 1;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -231,7 +414,11 @@ h1 {
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 135px 6% 60px;
+
+    padding:
+      135px
+      6%
+      60px;
   }
 
   h1 {
@@ -262,4 +449,17 @@ h1 {
   .person-three {
     top: 240px;
   }
+
+  .companies {
+    padding: 90px 6% 100px;
+  }
+
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-card {
+    min-height: 320px;
+  }
+
 }

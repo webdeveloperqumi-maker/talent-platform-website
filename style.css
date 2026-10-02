@@ -464,6 +464,11 @@ button {
     line-height: 1.75;
 }
 
+
+/* =========================================
+   TALENT DIRECTORY
+========================================= */
+
 .talent-showcase {
     display: grid;
 
@@ -476,133 +481,219 @@ button {
     align-items: stretch;
 }
 
-.featured-professional {
-    position: relative;
-
+.talent-directory {
     min-height: 720px;
 
-    overflow: hidden;
+    padding: 36px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150,210,255,0.075),
+            rgba(12,28,45,0.95)
+        );
+
+    border: 1px solid rgba(170,215,255,0.13);
 
     border-radius: 32px;
-
-    background: #15263a;
-
-    border: 1px solid rgba(170,215,255,0.12);
 
     box-shadow:
         0 25px 70px rgba(0,0,0,0.25);
 }
 
-.professional-image {
-    position: absolute;
-
-    inset: 0;
-
+.directory-top {
     display: flex;
 
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            #1b3046,
-            #101f31
-        );
-
-    color: rgba(255,255,255,0.20);
-
-    font-size: 0.68rem;
-
-    letter-spacing: 0.15em;
-}
-
-.professional-glass {
-    position: absolute;
-
-    left: 32px;
-    right: 32px;
-    bottom: 32px;
-
-    padding: 30px;
-
-    display: flex;
+    align-items: flex-start;
 
     justify-content: space-between;
 
-    align-items: flex-end;
+    gap: 30px;
 
-    gap: 35px;
-
-    background: rgba(150,210,255,0.10);
-
-    border: 1px solid rgba(180,225,255,0.25);
-
-    border-radius: 24px;
-
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.13),
-        0 20px 50px rgba(0,0,0,0.25);
+    margin-bottom: 18px;
 }
 
-.professional-label {
-    display: block;
-
-    color: rgba(190,225,255,0.70);
-
-    font-size: 0.63rem;
-
-    letter-spacing: 0.16em;
-
-    margin-bottom: 12px;
-}
-
-.professional-glass h3 {
+.directory-top h3 {
     font-family: "Instrument Serif", serif;
 
-    font-size: 2.7rem;
+    font-size: clamp(3rem, 5vw, 5rem);
 
     font-weight: 400;
 
-    margin-bottom: 3px;
+    line-height: 0.9;
 }
 
-.professional-glass p {
-    margin: 0;
+.directory-status {
+    padding: 8px 11px;
+
+    border: 1px solid rgba(180,225,255,0.15);
+
+    border-radius: 100px;
+
+    color: rgba(200,230,250,0.48);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
 }
 
-#professional-role {
-    color: rgba(200,225,250,0.78);
+.directory-description {
+    max-width: 570px;
 
-    font-size: 0.88rem;
+    color: rgba(255,255,255,0.52);
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.professional-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+.professional-profile {
+    min-height: 145px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: rgba(150,210,255,0.045);
+
+    border: 1px solid rgba(170,215,255,0.11);
+
+    border-radius: 19px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.professional-profile:hover {
+    transform: translateX(5px);
+
+    background: rgba(150,210,255,0.075);
+
+    border-color: rgba(180,225,255,0.22);
+}
+
+.profile-number {
+    align-self: start;
+
+    color: rgba(190,225,255,0.40);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+}
+
+.profile-main > span {
+    display: block;
+
+    color: rgba(190,225,255,0.48);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 7px;
+}
+
+.profile-main h4 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: 1.9rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 5px;
+}
+
+.profile-main p {
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.72rem;
 
     margin-bottom: 12px;
 }
 
-#professional-description {
-    max-width: 500px;
+.profile-tags {
+    display: flex;
 
-    color: rgba(255,255,255,0.62);
+    flex-wrap: wrap;
 
-    font-size: 0.78rem;
-
-    line-height: 1.65;
+    gap: 6px;
 }
 
-.professional-link {
-    flex-shrink: 0;
+.profile-tags span {
+    padding: 6px 9px;
 
-    color: #d9efff;
+    background: rgba(150,210,255,0.055);
 
-    text-decoration: none;
+    border: 1px solid rgba(170,215,255,0.12);
 
-    font-size: 0.76rem;
+    border-radius: 100px;
 
-    white-space: nowrap;
+    color: rgba(215,238,255,0.60);
+
+    font-size: 0.58rem;
 }
+
+.profile-action {
+    align-self: center;
+
+    padding: 9px 12px;
+
+    background: transparent;
+
+    border: 1px solid rgba(180,225,255,0.16);
+
+    border-radius: 10px;
+
+    color: rgba(215,238,255,0.70);
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.profile-action:hover {
+    background: rgba(150,210,255,0.10);
+
+    border-color: rgba(180,225,255,0.28);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TALENT CATEGORIES
+========================================= */
 
 .talent-categories {
     display: flex;
@@ -1502,28 +1593,62 @@ button {
         gap: 20px;
     }
 
-    .featured-professional {
-        min-height: 580px;
+    .talent-directory {
+        min-height: auto;
+
+        padding: 22px;
 
         border-radius: 25px;
     }
 
-    .professional-glass {
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
+    .directory-top {
+        gap: 15px;
 
-        padding: 21px;
-
-        display: block;
+        margin-bottom: 15px;
     }
 
-    .professional-glass h3 {
-        font-size: 2.2rem;
+    .directory-top h3 {
+        font-size: 3rem;
     }
 
-    #professional-description {
-        margin-bottom: 18px;
+    .directory-status {
+        font-size: 0.52rem;
+
+        padding: 7px 9px;
+    }
+
+    .directory-description {
+        margin-bottom: 24px;
+    }
+
+    .professional-list {
+        margin-top: 0;
+    }
+
+    .professional-profile {
+        min-height: 135px;
+
+        padding: 17px;
+
+        grid-template-columns: 28px minmax(0, 1fr);
+
+        gap: 12px;
+    }
+
+    .profile-action {
+        grid-column: 2;
+
+        justify-self: start;
+
+        margin-top: -2px;
+    }
+
+    .profile-main h4 {
+        font-size: 1.7rem;
+    }
+
+    .profile-tags span {
+        font-size: 0.54rem;
     }
 
     .talent-categories {

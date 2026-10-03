@@ -13,7 +13,8 @@ const talentPool = [
         category: "marketing",
         displayCategory: "MARKETING",
         largeRole: "CONTENT<br>STRATEGY",
-        role: "Marketing Strategist"
+        role: "Marketing Strategist",
+        image: "IMG_0207.jpeg"
     },
 
     {
@@ -21,7 +22,8 @@ const talentPool = [
         category: "design",
         displayCategory: "DESIGN",
         largeRole: "PRODUCT<br>DESIGN",
-        role: "Product Designer"
+        role: "Product Designer",
+        image: "IMG_0208.jpeg"
     },
 
     {
@@ -29,7 +31,8 @@ const talentPool = [
         category: "marketing",
         displayCategory: "MARKETING",
         largeRole: "PAID<br>MEDIA",
-        role: "Marketing Specialist"
+        role: "Marketing Specialist",
+        image: "IMG_0209.jpeg"
     },
 
     {
@@ -37,7 +40,8 @@ const talentPool = [
         category: "project",
         displayCategory: "PROJECTS",
         largeRole: "PROJECT<br>DELIVERY",
-        role: "Project Manager"
+        role: "Project Manager",
+        image: "IMG_0210.jpeg"
     },
 
     {
@@ -45,7 +49,8 @@ const talentPool = [
         category: "engineering",
         displayCategory: "ENGINEERING",
         largeRole: "SOFTWARE<br>ENGINEERING",
-        role: "Engineer"
+        role: "Engineer",
+        image: "IMG_0211.jpeg"
     },
 
     {
@@ -53,7 +58,8 @@ const talentPool = [
         category: "product",
         displayCategory: "PRODUCT",
         largeRole: "PRODUCT<br>MANAGEMENT",
-        role: "Product Manager"
+        role: "Product Manager",
+        image: "IMG_0212.jpeg"
     }
 ];
 
@@ -110,6 +116,9 @@ function updateHeroCard(card, person) {
     const name =
         card.querySelector(".hero-person-name");
 
+    const image =
+        card.querySelector("img");
+
 
     /* Fade out */
 
@@ -139,6 +148,11 @@ function updateHeroCard(card, person) {
         if (name) {
             name.textContent =
                 person.name;
+        }
+
+        if (image) {
+            image.src = person.image;
+            image.alt = `${person.name} — ${person.role}`;
         }
 
 

@@ -1572,23 +1572,6 @@ button {
     }
 
 }
-
-
-/* =========================================
-   REDUCED MOTION
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-
-}
 /* =========================================
    HERO PROFESSIONAL PHOTOGRAPHS
 ========================================= */
@@ -1596,11 +1579,23 @@ button {
 .person-image {
     position: relative;
     overflow: hidden;
+    min-height: 420px;
 }
 
 .person-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    z-index: 0;
+}
+
+/* Keep the editorial text above the photograph */
+.person-image .person-index,
+.person-image .person-category,
+.person-image .person-large-role {
+    position: relative;
+    z-index: 2;
 }

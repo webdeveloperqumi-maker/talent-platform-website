@@ -2153,3 +2153,792 @@ button {
     }
 
 }
+/* =========================================================
+   INTERACTIVE TALENT DIRECTORY
+   ========================================================= */
+
+.professional-item {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 17px 20px;
+
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) 24px;
+
+    align-items: center;
+    gap: 15px;
+
+    text-align: left;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150, 210, 255, 0.055),
+            rgba(150, 210, 255, 0.025)
+        );
+
+    border: 1px solid rgba(170, 215, 255, 0.11);
+
+    border-radius: 17px;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    font-family: inherit;
+
+    opacity: 0;
+
+    animation:
+        professionalItemIn
+        0.45s
+        ease
+        forwards;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Stagger the directory entries */
+
+.professional-item:nth-child(1) {
+    animation-delay: 0.03s;
+}
+
+.professional-item:nth-child(2) {
+    animation-delay: 0.06s;
+}
+
+.professional-item:nth-child(3) {
+    animation-delay: 0.09s;
+}
+
+.professional-item:nth-child(4) {
+    animation-delay: 0.12s;
+}
+
+.professional-item:nth-child(5) {
+    animation-delay: 0.15s;
+}
+
+.professional-item:nth-child(6) {
+    animation-delay: 0.18s;
+}
+
+.professional-item:nth-child(7) {
+    animation-delay: 0.21s;
+}
+
+.professional-item:nth-child(8) {
+    animation-delay: 0.24s;
+}
+
+.professional-item:nth-child(9) {
+    animation-delay: 0.27s;
+}
+
+.professional-item:nth-child(10) {
+    animation-delay: 0.30s;
+}
+
+.professional-item:nth-child(11) {
+    animation-delay: 0.33s;
+}
+
+@keyframes professionalItemIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Number */
+
+.professional-number {
+    color: rgba(190, 225, 255, 0.38);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.10em;
+
+    align-self: center;
+}
+
+
+/* Name + role */
+
+.professional-information {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.professional-information strong {
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.94);
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: 1.55rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-overflow: ellipsis;
+}
+
+.professional-information small {
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.43);
+
+    font-size: 0.65rem;
+
+    line-height: 1.4;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* Arrow */
+
+.professional-arrow {
+    color: rgba(190, 225, 255, 0.42);
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Hover */
+
+.professional-item:hover {
+    transform: translateX(5px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150, 210, 255, 0.105),
+            rgba(150, 210, 255, 0.045)
+        );
+
+    border-color: rgba(180, 225, 255, 0.25);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 12px 35px rgba(0, 0, 0, 0.14);
+}
+
+.professional-item:hover .professional-arrow {
+    color: #d9efff;
+
+    transform: translateX(4px);
+}
+
+
+/* Keyboard accessibility */
+
+.professional-item:focus-visible {
+    outline: 2px solid rgba(205, 235, 255, 0.80);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   EMPTY TALENT STATE
+   ========================================================= */
+
+.talent-empty {
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 0.75rem;
+
+    text-align: center;
+
+    border: 1px dashed rgba(170, 215, 255, 0.12);
+
+    border-radius: 17px;
+}
+
+
+/* =========================================================
+   TALENT PROFILE MODAL
+   ========================================================= */
+
+.talent-profile-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.talent-profile-modal.is-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* Background */
+
+.talent-profile-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(2, 8, 16, 0.76);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    cursor: pointer;
+}
+
+
+/* Profile panel */
+
+.talent-profile-panel {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(620px, 100%);
+
+    max-height: min(760px, calc(100vh - 60px));
+
+    overflow-y: auto;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(21, 43, 65, 0.92),
+            rgba(7, 17, 31, 0.96)
+        );
+
+    border: 1px solid rgba(180, 225, 255, 0.23);
+
+    border-radius: 28px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.09),
+        0 35px 100px rgba(0, 0, 0, 0.48);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    transform:
+        translateY(20px)
+        scale(0.97);
+
+    transition:
+        transform 0.4s ease;
+}
+
+.talent-profile-modal.is-open
+.talent-profile-panel {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* Decorative glass ring */
+
+.talent-profile-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -130px;
+    right: -100px;
+
+    border: 1px solid rgba(180, 225, 255, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.talent-profile-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    bottom: -120px;
+    left: -100px;
+
+    border: 1px solid rgba(180, 225, 255, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Close button */
+
+.talent-profile-close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(180, 225, 255, 0.16);
+
+    border-radius: 50%;
+
+    background: rgba(150, 210, 255, 0.055);
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 1.4rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.talent-profile-close:hover {
+    background: rgba(150, 210, 255, 0.13);
+
+    border-color: rgba(180, 225, 255, 0.32);
+
+    color: #ffffff;
+
+    transform: rotate(5deg);
+}
+
+.talent-profile-close:focus-visible {
+    outline: 2px solid rgba(205, 235, 255, 0.80);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.talent-profile-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 82px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding-right: 55px;
+
+    margin-bottom: 42px;
+}
+
+
+/* Initials */
+
+.talent-profile-initials {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(150, 210, 255, 0.25),
+            rgba(150, 210, 255, 0.07)
+        );
+
+    border: 1px solid rgba(180, 225, 255, 0.23);
+
+    border-radius: 22px;
+
+    color: rgba(225, 243, 255, 0.88);
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: 2rem;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+
+/* Eyebrow */
+
+.talent-profile-eyebrow {
+    margin-bottom: 8px;
+
+    color: rgba(190, 225, 255, 0.56);
+
+    font-size: 0.57rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* Name */
+
+#talent-profile-name {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* Role */
+
+#talent-profile-role {
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 0.76rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PROFILE CONTENT
+   ========================================================= */
+
+.talent-profile-content {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 32px;
+}
+
+.talent-profile-section {
+    padding: 20px;
+
+    background: rgba(150, 210, 255, 0.035);
+
+    border: 1px solid rgba(170, 215, 255, 0.10);
+
+    border-radius: 17px;
+}
+
+.talent-profile-section > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: rgba(190, 225, 255, 0.48);
+
+    font-size: 0.57rem;
+
+    letter-spacing: 0.14em;
+}
+
+.talent-profile-section > strong {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 0.82rem;
+
+    font-weight: 500;
+}
+
+#talent-profile-description {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.78rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HIRE BUTTON
+   ========================================================= */
+
+.talent-profile-actions {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    padding-top: 5px;
+}
+
+.talent-hire-button {
+    min-width: 170px;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+.talent-hire-button:focus-visible {
+    outline: 2px solid rgba(205, 235, 255, 0.80);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   PREVENT PAGE SCROLL WHILE PROFILE IS OPEN
+   ========================================================= */
+
+body.talent-modal-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE TALENT DIRECTORY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .professional-item {
+        min-height: 76px;
+
+        padding: 15px 14px;
+
+        grid-template-columns:
+            28px
+            minmax(0, 1fr)
+            20px;
+
+        gap: 10px;
+
+        border-radius: 15px;
+    }
+
+
+    .professional-information strong {
+        font-size: 1.32rem;
+    }
+
+
+    .professional-information small {
+        font-size: 0.59rem;
+    }
+
+
+    .professional-number {
+        font-size: 0.57rem;
+    }
+
+
+    .professional-arrow {
+        font-size: 0.85rem;
+    }
+
+
+    /* =====================================
+       PROFILE MODAL
+    ===================================== */
+
+    .talent-profile-modal {
+        align-items: flex-end;
+
+        padding: 12px;
+    }
+
+
+    .talent-profile-panel {
+        width: 100%;
+
+        max-height: calc(100vh - 24px);
+
+        padding: 25px 20px 22px;
+
+        border-radius: 25px;
+    }
+
+
+    .talent-profile-header {
+        grid-template-columns:
+            62px
+            minmax(0, 1fr);
+
+        gap: 15px;
+
+        padding-right: 42px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .talent-profile-initials {
+        width: 62px;
+        height: 62px;
+
+        border-radius: 17px;
+
+        font-size: 1.5rem;
+    }
+
+
+    .talent-profile-eyebrow {
+        font-size: 0.51rem;
+    }
+
+
+    #talent-profile-name {
+        font-size: 2.35rem;
+    }
+
+
+    #talent-profile-role {
+        font-size: 0.67rem;
+    }
+
+
+    .talent-profile-section {
+        padding: 16px;
+    }
+
+
+    #talent-profile-description {
+        font-size: 0.72rem;
+
+        line-height: 1.65;
+    }
+
+
+    .talent-profile-actions {
+        width: 100%;
+    }
+
+
+    .talent-hire-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .professional-item {
+        opacity: 1;
+
+        animation: none;
+
+        transition: none;
+    }
+
+    .talent-profile-modal,
+    .talent-profile-panel,
+    .professional-item,
+    .professional-arrow {
+        transition: none;
+    }
+
+}

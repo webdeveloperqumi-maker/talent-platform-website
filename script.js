@@ -1,673 +1,580 @@
-/* =========================================
-   TALENT PLATFORM — MAIN JAVASCRIPT
-========================================= */
-
-
-/* =========================================
-   PUBLICLY LISTED TOPTAL TALENT
-========================================= */
+/* =========================================================
+   TALENT PLATFORM — TALENT DIRECTORY
+   Names + roles only
+   ========================================================= */
 
 const talentPool = [
+  /* =========================
+     DEVELOPERS
+     ========================= */
+  {
+    name: "Victor Krim",
+    category: "engineering",
+    role: "AI Developer"
+  },
+  {
+    name: "Manuela Kajkara",
+    category: "engineering",
+    role: "AR/VR Developer"
+  },
+  {
+    name: "Nimrod Talmon",
+    category: "engineering",
+    role: "AI Developer"
+  },
+  {
+    name: "Gabriel de Souza",
+    category: "engineering",
+    role: "Principal AI Engineer"
+  },
+  {
+    name: "Ram Verma",
+    category: "engineering",
+    role: "Data Engineer"
+  },
+  {
+    name: "Simon Geisler",
+    category: "engineering",
+    role: "AI Researcher"
+  },
+  {
+    name: "Vladimir Mitrovic",
+    category: "engineering",
+    role: "iOS Developer"
+  },
+  {
+    name: "Jonah Elbaz",
+    category: "engineering",
+    role: "React Developer"
+  },
 
-    /* ENGINEERING */
+  /* =========================
+     DESIGNERS
+     ========================= */
+  {
+    name: "Fabio Muniz",
+    category: "design",
+    role: "Designer"
+  },
+  {
+    name: "Abdulhameid Grandoka",
+    category: "design",
+    role: "Designer"
+  },
+  {
+    name: "Danielle Thompson",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Kevin Korpi",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Rachel Gelb",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Guilherme Cerqueira",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "James Rhodes",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Great Ndidi",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Anne Clark",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Alex Gilev",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Ritika Sharma",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Jordan Grauf",
+    category: "design",
+    role: "Product Designer"
+  },
+  {
+    name: "Jeremy Santy",
+    category: "design",
+    role: "Product Designer"
+  },
 
-    {
-        name: "Victor Krim",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "AI Developer"
-    },
+  /* =========================
+     MARKETING EXPERTS
+     ========================= */
+  {
+    name: "Brion Roberto",
+    category: "marketing",
+    role: "Marketing Strategist"
+  },
+  {
+    name: "Kate Macknight",
+    category: "marketing",
+    role: "Marketing Manager"
+  },
+  {
+    name: "Orly Sigal",
+    category: "marketing",
+    role: "Marketing Director"
+  },
+  {
+    name: "Anna Yelkina-Damman",
+    category: "marketing",
+    role: "Marketing Manager"
+  },
+  {
+    name: "Jason Raphael",
+    category: "marketing",
+    role: "Digital Strategy Consultant"
+  },
+  {
+    name: "Jennifer Rustigian",
+    category: "marketing",
+    role: "Marketing Director"
+  },
+  {
+    name: "Blake Stockton",
+    category: "marketing",
+    role: "Marketing Expert"
+  },
+  {
+    name: "Camila Pereira",
+    category: "marketing",
+    role: "Marketing Expert"
+  },
+  {
+    name: "David Bailey",
+    category: "marketing",
+    role: "Marketing Expert"
+  },
+  {
+    name: "Jake Madoff",
+    category: "marketing",
+    role: "Growth Marketing Expert"
+  },
+  {
+    name: "Cheryl Da Silva",
+    category: "marketing",
+    role: "Marketing Strategist"
+  },
 
-    {
-        name: "Manuela Kajkara",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "AR/VR Developer"
-    },
+  /* =========================
+     MANAGEMENT CONSULTANTS
+     ========================= */
+  {
+    name: "Jakub Rehor",
+    category: "consulting",
+    role: "Financial Analyst"
+  },
+  {
+    name: "Vincent Grandjean",
+    category: "consulting",
+    role: "Business Strategist"
+  },
+  {
+    name: "Margaryta Pugachova",
+    category: "consulting",
+    role: "M&A Expert"
+  },
+  {
+    name: "Andrew Aziz",
+    category: "consulting",
+    role: "Finance Expert"
+  },
+  {
+    name: "Kelly Sickles",
+    category: "consulting",
+    role: "Finance Expert"
+  },
+  {
+    name: "Neil Portus",
+    category: "consulting",
+    role: "Finance Expert"
+  },
+  {
+    name: "Gayemarie Brown",
+    category: "consulting",
+    role: "Management Consultant"
+  },
+  {
+    name: "Arvind Kumar",
+    category: "consulting",
+    role: "Growth Strategy Consultant"
+  },
+  {
+    name: "Fabian Schvartzman",
+    category: "consulting",
+    role: "Business Strategy Consultant"
+  },
 
-    {
-        name: "Nimrod Talmon",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "AI Developer"
-    },
+  /* =========================
+     PROJECT MANAGERS
+     ========================= */
+  {
+    name: "Richard Forsythe",
+    category: "project",
+    role: "Project Manager"
+  },
+  {
+    name: "Anna D. Lukasiak",
+    category: "project",
+    role: "Project Manager"
+  },
+  {
+    name: "Kamil Imański",
+    category: "project",
+    role: "Scrum Master"
+  },
+  {
+    name: "Charlie Lucas",
+    category: "project",
+    role: "Program Manager"
+  },
+  {
+    name: "Tarik Aossey",
+    category: "project",
+    role: "Senior Project Manager"
+  },
+  {
+    name: "Julia Manning",
+    category: "project",
+    role: "Agile Coach"
+  },
+  {
+    name: "Erica Gasparini",
+    category: "project",
+    role: "Project Manager"
+  },
+  {
+    name: "Erita Skendaj",
+    category: "project",
+    role: "Project Manager"
+  },
 
-    {
-        name: "Gabriel de Souza",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "Principal AI Engineer"
-    },
+  /* =========================
+     PRODUCT MANAGERS
+     ========================= */
+  {
+    name: "Adan Perez",
+    category: "product",
+    role: "Product Owner"
+  },
+  {
+    name: "Greg Prickril",
+    category: "product",
+    role: "Interim CPO"
+  },
+  {
+    name: "Casey Arrington",
+    category: "product",
+    role: "Product Manager"
+  },
+  {
+    name: "Zachary Goldberg",
+    category: "product",
+    role: "Product Manager"
+  },
+  {
+    name: "Sreedevi Kaimal",
+    category: "product",
+    role: "Product Manager"
+  },
+  {
+    name: "Mayank Mittal",
+    category: "product",
+    role: "Product Manager"
+  },
+  {
+    name: "Adrian Gonzalez",
+    category: "product",
+    role: "AI Product Manager"
+  },
 
-    {
-        name: "Ram Verma",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "Data Engineer"
-    },
-
-    {
-        name: "Simon Geisler",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "AI Researcher"
-    },
-
-    {
-        name: "Vladimir Mitrovic",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "iOS Developer"
-    },
-
-    {
-        name: "Jonah Elbaz",
-        category: "engineering",
-        displayCategory: "ENGINEERING",
-        role: "React Developer"
-    },
-
-
-    /* DESIGN */
-
-    {
-        name: "Jeremy Santy",
-        category: "design",
-        displayCategory: "DESIGN",
-        role: "Product Designer"
-    },
-
-    {
-        name: "Danielle Thompson",
-        category: "design",
-        displayCategory: "DESIGN",
-        role: "Product Designer"
-    },
-
-
-    /* MARKETING */
-
-    {
-        name: "Andre N. Walker",
-        category: "marketing",
-        displayCategory: "MARKETING",
-        role: "Brand Strategist"
-    },
-
-    {
-        name: "Camila Pereira",
-        category: "marketing",
-        displayCategory: "MARKETING",
-        role: "Paid Media Expert"
-    },
-
-    {
-        name: "Cheryl Da Silva",
-        category: "marketing",
-        displayCategory: "MARKETING",
-        role: "Marketing Strategist"
-    },
-
-
-    /* MANAGEMENT CONSULTING */
-
-    {
-        name: "Jakub Rehor",
-        category: "consulting",
-        displayCategory: "CONSULTING",
-        role: "Financial Analyst"
-    },
-
-    {
-        name: "Savannah Enright",
-        category: "consulting",
-        displayCategory: "CONSULTING",
-        role: "Management Consultant"
-    },
-
-    {
-        name: "Arvind Kumar",
-        category: "consulting",
-        displayCategory: "CONSULTING",
-        role: "FP&A Expert"
-    },
-
-
-    /* PROJECT MANAGEMENT */
-
-    {
-        name: "Erita Skendaj",
-        category: "project",
-        displayCategory: "PROJECTS",
-        role: "Project Manager"
-    },
-
-
-    /* PRODUCT MANAGEMENT */
-
-    {
-        name: "Adrian Gonzalez",
-        category: "product",
-        displayCategory: "PRODUCT",
-        role: "AI Product Manager"
-    },
-
-    {
-        name: "Casey Arrington",
-        category: "product",
-        displayCategory: "PRODUCT",
-        role: "Product Manager"
-    }
-
+  /* =========================
+     SALES EXPERTS
+     ========================= */
+  {
+    name: "Ramanujam T R",
+    category: "sales",
+    role: "Sales Strategist"
+  },
+  {
+    name: "Deby Chung",
+    category: "sales",
+    role: "Business Development Manager"
+  },
+  {
+    name: "Lorenzo Santos",
+    category: "sales",
+    role: "Sales Manager"
+  }
 ];
 
 
-/* =========================================
-   HERO
-========================================= */
-
-const heroCards = [
-    document.querySelector(".person-card-one"),
-    document.querySelector(".person-card-two"),
-    document.querySelector(".person-card-three")
-];
-
-
-/* =========================================
-   HERO PEOPLE
-========================================= */
-
-function getRandomPeople() {
-
-    const shuffled = [...talentPool];
-
-    for (let i = shuffled.length - 1; i > 0; i--) {
-
-        const randomIndex =
-            Math.floor(Math.random() * (i + 1));
-
-        [shuffled[i], shuffled[randomIndex]] =
-            [shuffled[randomIndex], shuffled[i]];
-    }
-
-    return shuffled.slice(0, 3);
-}
-
-
-/* =========================================
-   UPDATE HERO
-========================================= */
-
-function updateHeroCard(card, person) {
-
-    if (!card || !person) return;
-
-    const category =
-        card.querySelector(".person-category");
-
-    const largeRole =
-        card.querySelector(".person-large-role");
-
-    const role =
-        card.querySelector(".hero-person-role");
-
-    const name =
-        card.querySelector(".hero-person-name");
-
-
-    card.style.opacity = "0.25";
-
-    card.style.transform =
-        "translateY(8px)";
-
-
-    setTimeout(() => {
-
-        if (category) {
-            category.textContent =
-                person.displayCategory;
-        }
-
-        if (largeRole) {
-            largeRole.innerHTML =
-                person.role.toUpperCase();
-        }
-
-        if (role) {
-            role.textContent =
-                person.role;
-        }
-
-        if (name) {
-            name.textContent =
-                person.name;
-        }
-
-        card.style.opacity = "1";
-
-        card.style.transform =
-            "translateY(0)";
-
-    }, 350);
-
-}
-
-
-/* =========================================
-   HERO ROTATION
-========================================= */
-
-function rotateHeroProfessionals() {
-
-    const people =
-        getRandomPeople();
-
-    heroCards.forEach(
-        (card, index) => {
-
-            updateHeroCard(
-                card,
-                people[index]
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================================
-   HERO INITIAL STATE
-========================================= */
-
-if (heroCards.length === 3) {
-
-    setTimeout(
-        rotateHeroProfessionals,
-        5000
-    );
-
-    setInterval(
-        rotateHeroProfessionals,
-        8000
-    );
-
-}
-
-
-/* =========================================
-   HERO CARD MOVEMENT
-========================================= */
-
-heroCards.forEach(
-    (card, index) => {
-
-        if (!card) return;
-
-        card.style.transition =
-            "transform 0.45s ease, opacity 0.35s ease";
-
-
-        card.addEventListener(
-            "mousemove",
-            (event) => {
-
-                const rect =
-                    card.getBoundingClientRect();
-
-
-                const x =
-                    (event.clientX - rect.left) /
-                    rect.width - 0.5;
-
-                const y =
-                    (event.clientY - rect.top) /
-                    rect.height - 0.5;
-
-
-                const strength =
-                    index === 1 ? 5 : 3;
-
-
-                card.style.transform =
-                    `translate(${x * strength}px, ${y * strength}px)`;
-
-            }
-        );
-
-
-        card.addEventListener(
-            "mouseleave",
-            () => {
-
-                card.style.transform =
-                    "translate(0, 0)";
-
-            }
-        );
-
-    }
+/* =========================================================
+   TALENT DIRECTORY ELEMENTS
+   ========================================================= */
+
+const professionalList = document.getElementById("professional-list");
+const professionalRole = document.getElementById("professional-role");
+const professionalDescription = document.getElementById(
+  "professional-description"
 );
 
-
-/* =========================================
-   TALENT DIRECTORY
-========================================= */
-
-const categoryButtons =
-    document.querySelectorAll(
-        ".talent-category"
-    );
+const talentCategories = document.querySelectorAll(".talent-category");
 
 
-const professionalList =
-    document.getElementById(
-        "professional-list"
-    );
+/* =========================================================
+   CATEGORY DATA
+   ========================================================= */
+
+const categoryDescriptions = {
+  engineering:
+    "Explore professionals working across software engineering and technology.",
+
+  design:
+    "Explore professionals creating thoughtful digital and visual experiences.",
+
+  marketing:
+    "Explore professionals specialising in growth, campaigns and brand strategy.",
+
+  consulting:
+    "Explore professionals helping organizations solve complex strategic challenges.",
+
+  project:
+    "Explore professionals responsible for planning, coordination and delivery.",
+
+  product:
+    "Explore professionals connecting product strategy, customer needs and business goals.",
+
+  sales:
+    "Explore professionals specialising in commercial strategy, sales and partnerships."
+};
 
 
-const professionalRole =
-    document.getElementById(
-        "professional-role"
-    );
-
-
-const professionalDescription =
-    document.getElementById(
-        "professional-description"
-    );
-
-
-/* =========================================
-   CATEGORY FILTER
-========================================= */
-
-function getCategoryPeople(category) {
-
-    return talentPool.filter(
-        person =>
-            person.category === category
-    );
-
-}
-
-
-/* =========================================
+/* =========================================================
    RENDER TALENT
-========================================= */
+   ========================================================= */
 
-function renderProfessionals(people) {
+function renderTalent(category) {
+  if (!professionalList) return;
 
-    if (!professionalList) return;
+  const filteredTalent = talentPool.filter(
+    person => person.category === category
+  );
 
-    professionalList.innerHTML = "";
+  professionalList.innerHTML = "";
 
+  if (filteredTalent.length === 0) {
+    professionalList.innerHTML = `
+      <div class="professional-empty">
+        <span>No professionals currently listed.</span>
+      </div>
+    `;
+    return;
+  }
 
-    if (people.length === 0) {
+  filteredTalent.forEach((person, index) => {
+    const item = document.createElement("div");
 
-        professionalList.innerHTML = `
-            <div class="professional-empty">
-                <span>VERIFIED TALENT</span>
-                <p>
-                    More verified professionals in this category
-                    will appear here soon.
-                </p>
-            </div>
-        `;
+    item.className = "professional-item";
 
-        return;
-    }
+    item.innerHTML = `
+      <span class="professional-number">
+        ${String(index + 1).padStart(2, "0")}
+      </span>
 
+      <div class="professional-details">
+        <strong>${person.name}</strong>
+        <span>${person.role}</span>
+      </div>
 
-    people.forEach(
-        (person, index) => {
+      <span class="professional-arrow">→</span>
+    `;
 
-            const card =
-                document.createElement(
-                    "article"
-                );
-
-
-            card.className =
-                "professional-profile";
-
-
-            card.style.setProperty(
-                "--profile-delay",
-                `${index * 80}ms`
-            );
-
-
-            card.innerHTML = `
-
-                <div class="profile-number">
-                    ${String(index + 1).padStart(2, "0")}
-                </div>
-
-
-                <div class="profile-main">
-
-                    <span>
-                        ${person.displayCategory}
-                    </span>
-
-
-                    <h4>
-                        ${person.name}
-                    </h4>
-
-
-                    <p>
-                        ${person.role}
-                    </p>
-
-
-                    <div class="profile-detail-line">
-                        Verified professional
-                        within the ${person.category}
-                        network.
-                    </div>
-
-
-                    <div class="profile-tags">
-
-                        <span>
-                            VERIFIED TALENT
-                        </span>
-
-                        <span>
-                            ${person.displayCategory}
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="profile-action"
-                    type="button"
-                    aria-label="View ${person.name}"
-                >
-                    View →
-                </button>
-
-            `;
-
-
-            professionalList.appendChild(
-                card
-            );
-
-        }
-    );
-
+    professionalList.appendChild(item);
+  });
 }
 
 
-/* =========================================
-   SHOW CATEGORY
-========================================= */
+/* =========================================================
+   CATEGORY SWITCHING
+   ========================================================= */
 
-function showCategory(button) {
+talentCategories.forEach(button => {
+  button.addEventListener("click", () => {
+    talentCategories.forEach(item => {
+      item.classList.remove("active");
+    });
 
-    if (!button) return;
+    button.classList.add("active");
 
-
-    categoryButtons.forEach(
-        item => {
-
-            item.classList.remove(
-                "active"
-            );
-
-        }
-    );
-
-
-    button.classList.add(
-        "active"
-    );
-
+    const category = button.dataset.category;
+    const role = button.dataset.role;
+    const description =
+      button.dataset.description ||
+      categoryDescriptions[category] ||
+      "";
 
     if (professionalRole) {
-
-        professionalRole.textContent =
-            button.dataset.role;
-
+      professionalRole.textContent = role;
     }
-
 
     if (professionalDescription) {
-
-        professionalDescription.textContent =
-            button.dataset.description;
-
+      professionalDescription.textContent = description;
     }
 
-
-    const people =
-        getCategoryPeople(
-            button.dataset.category
-        );
+    renderTalent(category);
+  });
+});
 
 
-    renderProfessionals(
-        people
-    );
+/* =========================================================
+   INITIAL DIRECTORY STATE
+   ========================================================= */
 
-}
-
-
-/* =========================================
-   CATEGORY BUTTONS
-========================================= */
-
-categoryButtons.forEach(
-    button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                showCategory(
-                    button
-                );
-
-            }
-        );
-
-    }
+const initialCategory = document.querySelector(
+  ".talent-category.active"
 );
 
+if (initialCategory) {
+  const initialCategoryName = initialCategory.dataset.category;
 
-/* =========================================
-   INITIAL CATEGORY
-========================================= */
+  if (professionalRole) {
+    professionalRole.textContent =
+      initialCategory.dataset.role || "Developers";
+  }
 
-const firstCategory =
-    document.querySelector(
-        ".talent-category.active"
-    );
+  if (professionalDescription) {
+    professionalDescription.textContent =
+      initialCategory.dataset.description ||
+      categoryDescriptions[initialCategoryName] ||
+      "";
+  }
 
-
-if (firstCategory) {
-
-    showCategory(
-        firstCategory
-    );
-
+  renderTalent(initialCategoryName);
 }
 
 
-/* =========================================
-   CASE STUDY MOVEMENT
-========================================= */
+/* =========================================================
+   HERO ROTATION
+   ========================================================= */
 
-const caseStudy =
-    document.querySelector(
-        ".featured-case-study"
-    );
+const heroCards = document.querySelectorAll(".hero-person");
 
+let currentHero = 0;
 
-const caseImage =
-    document.querySelector(
-        ".case-study-image"
-    );
+function rotateHero() {
+  if (!heroCards.length) return;
 
+  heroCards.forEach(card => {
+    card.classList.remove("hero-active");
+  });
 
-if (caseStudy && caseImage) {
+  heroCards[currentHero].classList.add("hero-active");
 
-    caseStudy.addEventListener(
-        "mousemove",
-        (event) => {
-
-            const rect =
-                caseStudy.getBoundingClientRect();
-
-
-            const x =
-                (event.clientX - rect.left) /
-                rect.width - 0.5;
-
-            const y =
-                (event.clientY - rect.top) /
-                rect.height - 0.5;
-
-
-            caseImage.style.transform =
-                `scale(1.025) translate(${x * 5}px, ${y * 5}px)`;
-
-        }
-    );
-
-
-    caseStudy.addEventListener(
-        "mouseleave",
-        () => {
-
-            caseImage.style.transform =
-                "scale(1) translate(0, 0)";
-
-        }
-    );
-
+  currentHero = (currentHero + 1) % heroCards.length;
 }
 
 
-/* =========================================
+/* =========================================================
    REDUCED MOTION
-========================================= */
+   ========================================================= */
 
-const prefersReducedMotion =
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+
+/* =========================================================
+   START HERO ROTATION
+   ========================================================= */
+
+if (heroCards.length) {
+  heroCards[0].classList.add("hero-active");
+
+  if (!prefersReducedMotion && heroCards.length > 1) {
+    setInterval(rotateHero, 4500);
+  }
+}
+
+
+/* =========================================================
+   CASE STUDY INTERACTION
+   ========================================================= */
+
+const caseStudy = document.querySelector(".featured-case-study");
+
+if (caseStudy && !prefersReducedMotion) {
+  caseStudy.addEventListener("mousemove", event => {
+    const rect = caseStudy.getBoundingClientRect();
+
+    const x =
+      ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+
+    const y =
+      ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    caseStudy.style.setProperty(
+      "--mouse-x",
+      `${x * 8}px`
     );
 
+    caseStudy.style.setProperty(
+      "--mouse-y",
+      `${y * 8}px`
+    );
+  });
 
-if (prefersReducedMotion.matches) {
-
-    document.documentElement.style.scrollBehavior =
-        "auto";
-
+  caseStudy.addEventListener("mouseleave", () => {
+    caseStudy.style.setProperty("--mouse-x", "0px");
+    caseStudy.style.setProperty("--mouse-y", "0px");
+  });
 }
+
+
+/* =========================================================
+   MOBILE TALENT CATEGORY FLOW
+   ========================================================= */
+
+const categoryContainer = document.querySelector(
+  ".talent-categories"
+);
+
+if (categoryContainer) {
+  categoryContainer.addEventListener("wheel", event => {
+    if (window.innerWidth <= 768) {
+      event.preventDefault();
+
+      categoryContainer.scrollLeft += event.deltaY;
+    }
+  }, { passive: false });
+}
+
+
+/* =========================================================
+   EXPOSE DATA FOR DEBUGGING
+   ========================================================= */
+
+window.TalentPlatform = {
+  talentPool,
+  renderTalent
+};

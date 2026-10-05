@@ -434,13 +434,6 @@
 
   function getTalentProfile(talent) {
 
-    /*
-     * We intentionally do not invent biographies or employment
-     * histories for real people.
-     *
-     * Additional verified information can be added here later.
-     */
-
     return {
       name: talent.name,
       role: talent.role,
@@ -449,6 +442,61 @@
         categoryDescriptions[talent.category] ||
         "Experienced professional available through the Talent Platform network."
     };
+  }
+
+
+  /* ============================================================
+     TALENT BRIEF SELECTION
+     ============================================================ */
+
+  function updateSelectedTalent(talent) {
+
+    const selectedCard =
+      document.getElementById("selected-talent-card");
+
+    const selectedAvatar =
+      document.getElementById("selected-talent-avatar");
+
+    const selectedName =
+      document.getElementById("selected-talent-name");
+
+    const selectedRole =
+      document.getElementById("selected-talent-role");
+
+    const selectedInput =
+      document.getElementById("selected-talent-input");
+
+
+    if (selectedName) {
+      selectedName.textContent = talent.name;
+    }
+
+
+    if (selectedRole) {
+      selectedRole.textContent = talent.role;
+    }
+
+
+    if (selectedAvatar) {
+      selectedAvatar.textContent =
+        getInitials(talent.name);
+    }
+
+
+    if (selectedInput) {
+      selectedInput.value =
+        talent.name;
+    }
+
+
+    if (selectedCard) {
+      selectedCard.classList.add("has-selection");
+    }
+
+
+    window.TalentPlatform.selectedTalent =
+      talent;
+
   }
 
 
@@ -496,11 +544,13 @@
 
     filteredTalent.forEach((talent, index) => {
 
-      const button = document.createElement("button");
+      const button =
+        document.createElement("button");
 
       button.type = "button";
 
-      button.className = "professional-item";
+      button.className =
+        "professional-item";
 
       button.dataset.talentId =
         createTalentId(talent.name);
@@ -526,15 +576,21 @@
           </small>
         </span>
 
-        <span class="professional-arrow" aria-hidden="true">
+        <span
+          class="professional-arrow"
+          aria-hidden="true"
+        >
           →
         </span>
       `;
 
 
-      button.addEventListener("click", () => {
-        openTalentProfile(talent);
-      });
+      button.addEventListener(
+        "click",
+        () => {
+          openTalentProfile(talent);
+        }
+      );
 
 
       professionalList.appendChild(button);
@@ -551,14 +607,23 @@
   function activateTalentCategory(button) {
 
     talentCategories.forEach(categoryButton => {
+
       categoryButton.classList.remove("active");
-      categoryButton.setAttribute("aria-selected", "false");
+
+      categoryButton.setAttribute(
+        "aria-selected",
+        "false"
+      );
+
     });
 
 
     button.classList.add("active");
 
-    button.setAttribute("aria-selected", "true");
+    button.setAttribute(
+      "aria-selected",
+      "true"
+    );
 
 
     const category =
@@ -575,9 +640,12 @@
 
   talentCategories.forEach(button => {
 
-    button.addEventListener("click", () => {
-      activateTalentCategory(button);
-    });
+    button.addEventListener(
+      "click",
+      () => {
+        activateTalentCategory(button);
+      }
+    );
 
   });
 
@@ -596,11 +664,17 @@
     }
 
 
-    talentModal = document.createElement("div");
+    talentModal =
+      document.createElement("div");
 
-    talentModal.className = "talent-profile-modal";
+    talentModal.className =
+      "talent-profile-modal";
 
-    talentModal.setAttribute("aria-hidden", "true");
+    talentModal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
 
     talentModal.innerHTML = `
       <div
@@ -645,7 +719,6 @@
 
         </div>
 
-
         <div class="talent-profile-content">
 
           <div class="talent-profile-section">
@@ -656,7 +729,6 @@
 
           </div>
 
-
           <div class="talent-profile-section">
 
             <span>ABOUT</span>
@@ -666,7 +738,6 @@
           </div>
 
         </div>
-
 
         <div class="talent-profile-actions">
 
@@ -684,14 +755,21 @@
     `;
 
 
-    document.body.appendChild(talentModal);
+    document.body.appendChild(
+      talentModal
+    );
 
 
     talentModal
-      .querySelectorAll("[data-close-talent]")
+      .querySelectorAll(
+        "[data-close-talent]"
+      )
       .forEach(element => {
 
-        element.addEventListener("click", closeTalentProfile);
+        element.addEventListener(
+          "click",
+          closeTalentProfile
+        );
 
       });
 
@@ -707,28 +785,42 @@
 
   function openTalentProfile(talent) {
 
-    const modal = createTalentModal();
+    const modal =
+      createTalentModal();
 
-    const profile = getTalentProfile(talent);
+    const profile =
+      getTalentProfile(talent);
 
 
     const initials =
-      modal.querySelector("#talent-profile-initials");
+      modal.querySelector(
+        "#talent-profile-initials"
+      );
 
     const name =
-      modal.querySelector("#talent-profile-name");
+      modal.querySelector(
+        "#talent-profile-name"
+      );
 
     const role =
-      modal.querySelector("#talent-profile-role");
+      modal.querySelector(
+        "#talent-profile-role"
+      );
 
     const category =
-      modal.querySelector("#talent-profile-category");
+      modal.querySelector(
+        "#talent-profile-category"
+      );
 
     const description =
-      modal.querySelector("#talent-profile-description");
+      modal.querySelector(
+        "#talent-profile-description"
+      );
 
     const hireButton =
-      modal.querySelector("#talent-hire-button");
+      modal.querySelector(
+        "#talent-hire-button"
+      );
 
 
     initials.textContent =
@@ -754,17 +846,26 @@
     };
 
 
-    modal.classList.add("is-open");
+    modal.classList.add(
+      "is-open"
+    );
 
-    modal.setAttribute("aria-hidden", "false");
+    modal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
 
-    document.body.classList.add("talent-modal-open");
+    document.body.classList.add(
+      "talent-modal-open"
+    );
 
 
     requestAnimationFrame(() => {
 
       const closeButton =
-        modal.querySelector(".talent-profile-close");
+        modal.querySelector(
+          ".talent-profile-close"
+        );
 
       if (closeButton) {
         closeButton.focus();
@@ -786,11 +887,18 @@
     }
 
 
-    talentModal.classList.remove("is-open");
+    talentModal.classList.remove(
+      "is-open"
+    );
 
-    talentModal.setAttribute("aria-hidden", "true");
+    talentModal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
 
-    document.body.classList.remove("talent-modal-open");
+    document.body.classList.remove(
+      "talent-modal-open"
+    );
 
   }
 
@@ -799,22 +907,27 @@
      ESCAPE KEY FOR PROFILE MODAL
      ============================================================ */
 
-  document.addEventListener("keydown", event => {
+  document.addEventListener(
+    "keydown",
+    event => {
 
-    if (event.key === "Escape") {
+      if (event.key === "Escape") {
 
-      if (
-        talentModal &&
-        talentModal.classList.contains("is-open")
-      ) {
+        if (
+          talentModal &&
+          talentModal.classList.contains(
+            "is-open"
+          )
+        ) {
 
-        closeTalentProfile();
+          closeTalentProfile();
+
+        }
 
       }
 
     }
-
-  });
+  );
 
 
   /* ============================================================
@@ -824,63 +937,36 @@
   function startHiringProcess(talent) {
 
     /*
-     * This is intentionally a frontend entry point.
-     *
-     * The real hiring/payment process must later connect to the
-     * client's backend/payment system once those credentials/API
-     * details are supplied.
+     * Frontend only.
+     * Real hiring/payment integration comes later.
      */
 
 
-    const hireSection =
-      document.getElementById("contact");
+    updateSelectedTalent(
+      talent
+    );
 
 
     closeTalentProfile();
 
 
+    const hireSection =
+      document.getElementById(
+        "hire"
+      );
+
+
     if (hireSection) {
-
-      const hireTarget =
-        document.querySelector(
-          "#hire-talent-form"
-        );
-
-
-      if (hireTarget) {
-
-        const selectedTalentInput =
-          hireTarget.querySelector(
-            '[name="talent"]'
-          );
-
-
-        if (selectedTalentInput) {
-
-          selectedTalentInput.value =
-            talent.name;
-
-        }
-
-      }
-
 
       hireSection.scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
 
-
       return;
 
     }
 
-
-    /*
-     * If the actual hiring form has not been connected yet,
-     * keep the selected professional available for the future
-     * backend integration.
-     */
 
     window.TalentPlatform.selectedTalent =
       talent;
@@ -889,8 +975,8 @@
 
 
   /* ============================================================
-     HIRE TALENT BUTTONS
-     * ============================================================ */
+     MAIN HIRE TALENT BUTTONS
+     ============================================================ */
 
   document
     .querySelectorAll(
@@ -898,26 +984,189 @@
     )
     .forEach(button => {
 
-      button.addEventListener("click", event => {
+      button.addEventListener(
+        "click",
+        event => {
 
-        const hireSection =
-          document.getElementById("contact");
+          const hireSection =
+            document.getElementById(
+              "hire"
+            );
 
 
-        if (hireSection) {
+          if (hireSection) {
 
-          event.preventDefault();
+            event.preventDefault();
 
-          hireSection.scrollIntoView({
+            hireSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+
+        }
+      );
+
+    });
+
+
+  /* ============================================================
+     TALENT BRIEF FORM
+     ============================================================ */
+
+  const hireForm =
+    document.getElementById(
+      "hire-talent-form"
+    );
+
+
+  if (hireForm) {
+
+    hireForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        const selectedTalentInput =
+          document.getElementById(
+            "selected-talent-input"
+          );
+
+
+        if (
+          !selectedTalentInput ||
+          !selectedTalentInput.value
+        ) {
+
+          const selectedCard =
+            document.getElementById(
+              "selected-talent-card"
+            );
+
+
+          if (selectedCard) {
+
+            selectedCard.classList.add(
+              "selection-required"
+            );
+
+          }
+
+          selectedCard?.scrollIntoView({
             behavior: "smooth",
-            block: "start"
+            block: "center"
           });
+
+          return;
 
         }
 
-      });
 
-    });
+        const submitArea =
+          hireForm.querySelector(
+            ".brief-submit-area"
+          );
+
+
+        if (!submitArea) {
+          return;
+        }
+
+
+        const existingMessage =
+          submitArea.querySelector(
+            ".brief-success-message"
+          );
+
+
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+
+        const successMessage =
+          document.createElement("p");
+
+
+        successMessage.className =
+          "brief-success-message";
+
+
+        successMessage.textContent =
+          "Thank you. Your talent brief has been received.";
+
+
+        submitArea.appendChild(
+          successMessage
+        );
+
+
+        hireForm.reset();
+
+
+        const selectedCard =
+          document.getElementById(
+            "selected-talent-card"
+          );
+
+        const selectedName =
+          document.getElementById(
+            "selected-talent-name"
+          );
+
+        const selectedRole =
+          document.getElementById(
+            "selected-talent-role"
+          );
+
+        const selectedAvatar =
+          document.getElementById(
+            "selected-talent-avatar"
+          );
+
+        const selectedInput =
+          document.getElementById(
+            "selected-talent-input"
+          );
+
+
+        if (selectedCard) {
+          selectedCard.classList.remove(
+            "has-selection"
+          );
+        }
+
+
+        if (selectedName) {
+          selectedName.textContent =
+            "Select a professional";
+        }
+
+
+        if (selectedRole) {
+          selectedRole.textContent =
+            "Choose someone from our talent network.";
+        }
+
+
+        if (selectedAvatar) {
+          selectedAvatar.textContent =
+            "—";
+        }
+
+
+        if (selectedInput) {
+          selectedInput.value =
+            "";
+        }
+
+      }
+    );
+
+  }
 
 
   /* ============================================================
@@ -956,19 +1205,15 @@
     );
 
 
-  const heroImages =
-    document.querySelectorAll(
-      ".hero-person img"
-    );
-
-
   const heroRotationDelay =
     5000;
 
 
-  let heroRotationTimer = null;
+  let heroRotationTimer =
+    null;
 
-  let heroRotationIndex = 0;
+  let heroRotationIndex =
+    0;
 
 
   function rotateHeroPeople() {
@@ -985,9 +1230,13 @@
     }
 
 
-    heroPeople.forEach(person => {
-      person.classList.remove("is-active");
-    });
+    heroPeople.forEach(
+      person => {
+        person.classList.remove(
+          "is-active"
+        );
+      }
+    );
 
 
     heroRotationIndex =
@@ -997,7 +1246,9 @@
 
     heroPeople[
       heroRotationIndex
-    ].classList.add("is-active");
+    ].classList.add(
+      "is-active"
+    );
 
   }
 
@@ -1016,7 +1267,9 @@
     }
 
 
-    clearInterval(heroRotationTimer);
+    clearInterval(
+      heroRotationTimer
+    );
 
 
     heroRotationTimer =
@@ -1030,16 +1283,21 @@
 
   function stopHeroRotation() {
 
-    clearInterval(heroRotationTimer);
+    clearInterval(
+      heroRotationTimer
+    );
 
-    heroRotationTimer = null;
+    heroRotationTimer =
+      null;
 
   }
 
 
   if (heroPeople.length) {
 
-    heroPeople[0].classList.add("is-active");
+    heroPeople[0].classList.add(
+      "is-active"
+    );
 
     startHeroRotation();
 
@@ -1159,45 +1417,47 @@
     );
 
 
-  horizontalContainers.forEach(container => {
+  horizontalContainers.forEach(
+    container => {
 
-    container.addEventListener(
-      "wheel",
-      event => {
+      container.addEventListener(
+        "wheel",
+        event => {
 
-        if (
-          window.innerWidth > 768 ||
-          Math.abs(event.deltaY) <=
-          Math.abs(event.deltaX)
-        ) {
+          if (
+            window.innerWidth > 768 ||
+            Math.abs(event.deltaY) <=
+            Math.abs(event.deltaX)
+          ) {
 
-          return;
+            return;
 
+          }
+
+
+          if (
+            container.scrollWidth <=
+            container.clientWidth
+          ) {
+
+            return;
+
+          }
+
+
+          event.preventDefault();
+
+          container.scrollLeft +=
+            event.deltaY;
+
+        },
+        {
+          passive: false
         }
+      );
 
-
-        if (
-          container.scrollWidth <=
-          container.clientWidth
-        ) {
-
-          return;
-
-        }
-
-
-        event.preventDefault();
-
-        container.scrollLeft +=
-          event.deltaY;
-
-      },
-      {
-        passive: false
-      }
-    );
-
-  });
+    }
+  );
 
 
   /* ============================================================
@@ -1215,7 +1475,9 @@
         event => {
 
           const targetId =
-            link.getAttribute("href");
+            link.getAttribute(
+              "href"
+            );
 
 
           if (
@@ -1287,7 +1549,9 @@
 
 
           const link =
-            card.querySelector("a");
+            card.querySelector(
+              "a"
+            );
 
 
           if (link) {
@@ -1341,6 +1605,7 @@
   ) {
 
     reducedMotionQuery.addListener(
+      "change",
       handleMotionPreference
     );
 
@@ -1366,6 +1631,8 @@
     closeTalentProfile,
 
     startHiringProcess,
+
+    updateSelectedTalent,
 
     getTalentProfile,
 

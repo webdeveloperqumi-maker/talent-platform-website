@@ -2942,3 +2942,921 @@ body.talent-modal-open {
     }
 
 }
+/* =========================================================
+   TALENT BRIEF — PREMIUM HIRING EXPERIENCE
+   ========================================================= */
+
+.talent-brief {
+    position: relative;
+
+    padding: 150px 7%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(110, 190, 245, 0.32),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(150, 215, 255, 0.25),
+            transparent 32%
+        ),
+        #b9e4f8;
+
+    color: #17212b;
+}
+
+
+/* Soft editorial background detail */
+
+.talent-brief::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: -280px;
+    right: -170px;
+
+    border: 1px solid rgba(255,255,255,0.50);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.talent-brief::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    bottom: -260px;
+    left: -180px;
+
+    border: 1px solid rgba(255,255,255,0.38);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN SHELL
+   ========================================================= */
+
+.talent-brief-shell {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1380px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.72fr)
+        minmax(0, 1.28fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.talent-brief-intro {
+    position: sticky;
+
+    top: 110px;
+
+    max-width: 500px;
+}
+
+.talent-brief-eyebrow {
+    margin-bottom: 25px;
+
+    color: #3c7898;
+
+    font-size: 0.66rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.talent-brief-intro h2 {
+    max-width: 520px;
+
+    margin-bottom: 28px;
+
+    color: #17212b;
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(4rem, 6vw, 6.4rem);
+
+    font-weight: 400;
+
+    line-height: 0.87;
+
+    letter-spacing: -0.035em;
+}
+
+.talent-brief-intro > p:last-child {
+    max-width: 390px;
+
+    color: rgba(23, 33, 43, 0.62);
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.talent-brief-form {
+    padding: 18px;
+
+    background: rgba(255,255,255,0.42);
+
+    border: 1px solid rgba(255,255,255,0.68);
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 30px 80px rgba(36, 89, 118, 0.16),
+        inset 0 1px 0 rgba(255,255,255,0.80);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   INDIVIDUAL STEPS
+   ========================================================= */
+
+.brief-step {
+    display: grid;
+
+    grid-template-columns: 54px minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding: 34px 30px;
+
+    background: rgba(255,255,255,0.82);
+
+    border: 1px solid rgba(255,255,255,0.90);
+
+    border-radius: 22px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(35, 75, 95, 0.06);
+}
+
+.brief-step-number {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #27343e;
+
+    border-radius: 50%;
+
+    color: #d9f3ff;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.brief-step-content {
+    min-width: 0;
+}
+
+.brief-label {
+    margin-bottom: 16px;
+
+    color: #557384;
+
+    font-size: 0.61rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   SELECTED PROFESSIONAL
+   ========================================================= */
+
+.selected-talent-card {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 14px 16px;
+
+    display: grid;
+
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(184,229,250,0.85),
+            rgba(232,248,255,0.92)
+        );
+
+    border: 1px solid rgba(95,164,198,0.24);
+
+    border-radius: 17px;
+}
+
+.selected-talent-avatar {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #27343e;
+
+    border-radius: 15px;
+
+    color: #dff5ff;
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: 1.25rem;
+}
+
+.selected-talent-card > div:nth-child(2) {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+#selected-talent-name {
+    overflow: hidden;
+
+    color: #17212b;
+
+    font-family: "Instrument Serif", serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-overflow: ellipsis;
+}
+
+#selected-talent-role {
+    overflow: hidden;
+
+    color: rgba(23,33,43,0.52);
+
+    font-size: 0.66rem;
+
+    line-height: 1.4;
+
+    text-overflow: ellipsis;
+}
+
+.selected-talent-check {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(72,145,180,0.12);
+
+    color: #3d7896;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.brief-field-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #27343e;
+
+    font-size: 0.74rem;
+
+    font-weight: 500;
+}
+
+.talent-brief textarea {
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 18px;
+
+    resize: vertical;
+
+    background: #f8fcfe;
+
+    border: 1px solid rgba(83,133,155,0.22);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    color: #17212b;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.65;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.talent-brief textarea::placeholder {
+    color: rgba(23,33,43,0.35);
+}
+
+.talent-brief textarea:focus {
+    background: #ffffff;
+
+    border-color: rgba(67,146,185,0.58);
+
+    box-shadow:
+        0 0 0 4px rgba(120,195,230,0.16);
+}
+
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+.brief-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.brief-option {
+    position: relative;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 15px 17px;
+
+    background: #f7fbfd;
+
+    border: 1px solid rgba(83,133,155,0.18);
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    color: #27343e;
+
+    font-size: 0.72rem;
+
+    line-height: 1.35;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.brief-option:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(67,146,185,0.42);
+
+    background: #ffffff;
+}
+
+.brief-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.brief-option span {
+    display: block;
+
+    width: 100%;
+}
+
+.brief-option:has(input:checked) {
+    background:
+        linear-gradient(
+            135deg,
+            #c4eafa,
+            #e9f8ff
+        );
+
+    border-color: rgba(55,135,175,0.58);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.70),
+        0 8px 22px rgba(49,118,151,0.10);
+
+    color: #1d526c;
+}
+
+.brief-option:has(input:checked)::after {
+    content: "✓";
+
+    position: absolute;
+
+    top: 9px;
+    right: 11px;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #27343e;
+
+    border-radius: 50%;
+
+    color: #dff6ff;
+
+    font-size: 0.55rem;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.brief-contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.brief-input-group {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.brief-input-full {
+    grid-column: 1 / -1;
+}
+
+.brief-input-group label {
+    color: #526b78;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+.brief-input-group input {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 14px 15px;
+
+    background: #f8fcfe;
+
+    border: 1px solid rgba(83,133,155,0.22);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    color: #17212b;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.brief-input-group input::placeholder {
+    color: rgba(23,33,43,0.32);
+}
+
+.brief-input-group input:focus {
+    background: #ffffff;
+
+    border-color: rgba(67,146,185,0.58);
+
+    box-shadow:
+        0 0 0 4px rgba(120,195,230,0.16);
+}
+
+
+/* =========================================================
+   SUBMIT AREA
+   ========================================================= */
+
+.brief-submit-area {
+    padding: 30px 20px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.brief-submit-area p {
+    max-width: 260px;
+
+    color: rgba(23,33,43,0.48);
+
+    font-size: 0.64rem;
+
+    line-height: 1.55;
+}
+
+.brief-submit-button {
+    min-height: 54px;
+
+    padding: 14px 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-shrink: 0;
+
+    background: #27343e;
+
+    border: 1px solid #27343e;
+
+    border-radius: 13px;
+
+    color: #e3f6ff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.73rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(31,55,68,0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.brief-submit-button span {
+    font-size: 1rem;
+
+    transition: transform 0.25s ease;
+}
+
+.brief-submit-button:hover {
+    transform: translateY(-3px);
+
+    background: #1d2932;
+
+    box-shadow:
+        0 17px 35px rgba(31,55,68,0.23);
+}
+
+.brief-submit-button:hover span {
+    transform: translateX(4px);
+}
+
+.brief-submit-button:focus-visible {
+    outline: 2px solid #4b9bc1;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .talent-brief {
+        padding: 120px 6%;
+    }
+
+    .talent-brief-shell {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .talent-brief-intro {
+        position: relative;
+
+        top: auto;
+
+        max-width: 650px;
+    }
+
+    .talent-brief-intro h2 {
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .talent-brief {
+        padding: 90px 5%;
+
+        background:
+            radial-gradient(
+                circle at 15% 10%,
+                rgba(110,190,245,0.28),
+                transparent 35%
+            ),
+            #b9e4f8;
+    }
+
+    .talent-brief-shell {
+        gap: 38px;
+    }
+
+    .talent-brief-intro {
+        max-width: 100%;
+    }
+
+    .talent-brief-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 0.58rem;
+    }
+
+    .talent-brief-intro h2 {
+        font-size: 3.65rem;
+
+        line-height: 0.88;
+
+        margin-bottom: 22px;
+    }
+
+    .talent-brief-intro > p:last-child {
+        max-width: 330px;
+
+        font-size: 0.78rem;
+
+        line-height: 1.7;
+    }
+
+    .talent-brief-form {
+        padding: 9px;
+
+        border-radius: 23px;
+    }
+
+    .brief-step {
+        grid-template-columns: 38px minmax(0, 1fr);
+
+        gap: 13px;
+
+        padding: 23px 17px;
+
+        border-radius: 17px;
+    }
+
+    .brief-step-number {
+        width: 34px;
+        height: 34px;
+
+        font-size: 0.52rem;
+    }
+
+    .brief-label {
+        margin-bottom: 13px;
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.12em;
+    }
+
+    .selected-talent-card {
+        grid-template-columns: 43px minmax(0, 1fr) 25px;
+
+        gap: 10px;
+
+        min-height: 70px;
+
+        padding: 11px;
+    }
+
+    .selected-talent-avatar {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 12px;
+
+        font-size: 1rem;
+    }
+
+    #selected-talent-name {
+        font-size: 1.18rem;
+    }
+
+    #selected-talent-role {
+        font-size: 0.57rem;
+    }
+
+    .selected-talent-check {
+        width: 25px;
+        height: 25px;
+
+        font-size: 0.65rem;
+    }
+
+    .brief-field-label {
+        font-size: 0.68rem;
+    }
+
+    .talent-brief textarea {
+        min-height: 135px;
+
+        padding: 15px;
+
+        font-size: 0.71rem;
+
+        border-radius: 13px;
+    }
+
+    .brief-options {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .brief-option {
+        min-height: 52px;
+
+        padding: 14px;
+
+        font-size: 0.68rem;
+
+        border-radius: 12px;
+    }
+
+    .brief-option:has(input:checked)::after {
+        top: 8px;
+        right: 9px;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .brief-contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .brief-input-full {
+        grid-column: auto;
+    }
+
+    .brief-input-group input {
+        min-height: 50px;
+
+        font-size: 0.7rem;
+    }
+
+    .brief-submit-area {
+        padding: 23px 9px 7px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 17px;
+    }
+
+    .brief-submit-area p {
+        max-width: 100%;
+
+        font-size: 0.6rem;
+    }
+
+    .brief-submit-button {
+        width: 100%;
+
+        min-height: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   TALENT BRIEF — REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .brief-option,
+    .brief-submit-button,
+    .talent-brief textarea,
+    .brief-input-group input {
+        transition: none;
+    }
+
+}
